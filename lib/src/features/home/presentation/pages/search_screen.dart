@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/search_form_field.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/search_result.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/search_result_item.dart';
 import 'package:marketplace/src/features/widgets/k_text_button.dart';
 
 @RoutePage()
@@ -64,27 +64,5 @@ class _SearchScreenState extends State<SearchScreen> {
 
   void _pop(BuildContext context) {
     context.router.maybePop();
-  }
-}
-
-class SearchResultItem extends StatelessWidget {
-  const SearchResultItem({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(
-          Icons.punch_clock_rounded,
-          size: 25.h,
-          color: Colors.grey,
-        ),
-        const Expanded(
-          child: SearchResult(),
-        )
-      ],
-    );
   }
 }

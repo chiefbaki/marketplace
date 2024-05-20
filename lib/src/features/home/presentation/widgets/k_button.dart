@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 
 class KButton extends StatelessWidget {
   final Function() onPressed;
   final IconData icon;
   final Color color;
+  final double size;
   const KButton(
       {super.key,
       required this.onPressed,
       required this.icon,
+      this.size = 28,
       this.color = AppColors.violent});
 
   @override
@@ -21,7 +22,7 @@ class KButton extends StatelessWidget {
         icon: Icon(
           icon,
           color: color,
-          size: 28.h,
+          size: size,
         ));
   }
 }
