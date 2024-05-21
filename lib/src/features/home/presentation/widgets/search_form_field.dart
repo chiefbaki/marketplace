@@ -24,6 +24,7 @@ class SearchFormField extends StatelessWidget {
           .copyWith(color: AppColors.black),
       controller: controller,
       cursorColor: AppColors.violent,
+      maxLines: 1,
       decoration: InputDecoration(
           hintText: S.of(context).search,
           hintStyle: Theme.of(context)

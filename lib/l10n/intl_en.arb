@@ -1,4 +1,10 @@
 {
   "search": "Поиск",
-  "cancel": "Отменить"
+  "cancel": "Отменить",
+  "pickUpPoint": "Пункт выдачи",
+  "deliver": "Курьер",
+  "order": "Заказать",
+  "share": "Поделиться",
+  "specialForYou": "Подобрали для вас",
+  "chooseOptions": "Выбор способа доставки"
 }

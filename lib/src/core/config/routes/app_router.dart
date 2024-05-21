@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:marketplace/src/features/home/presentation/pages/delivery_method_screen.dart';
 import 'package:marketplace/src/features/home/presentation/pages/home_screen.dart';
 import 'package:marketplace/src/features/home/presentation/pages/search_screen.dart';
 import 'package:marketplace/src/features/home/presentation/pages/test_screen.dart';
@@ -22,6 +23,10 @@ class AppRouter extends _$AppRouter {
             durationInMilliseconds: _duration),
         CustomRoute(
             page: TestRoute.page,
+            transitionsBuilder: TransitionsBuilders.fadeIn,
+            durationInMilliseconds: _duration),
+        CustomRoute(
+            page: DeliveryMethodRoute.page,
             transitionsBuilder: TransitionsBuilders.fadeIn,
             durationInMilliseconds: _duration),
       ];

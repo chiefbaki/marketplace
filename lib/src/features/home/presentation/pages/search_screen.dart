@@ -43,7 +43,10 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                   KTextBtn(
                     onPressed: () => _pop(context),
-                    title: S.of(context).cancel,
+                    title: Text(
+                      S.of(context).cancel,
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
                   )
                 ],
               ),

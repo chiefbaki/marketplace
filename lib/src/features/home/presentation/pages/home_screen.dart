@@ -2,9 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:marketplace/generated/l10n.dart';
+import 'package:marketplace/src/core/config/routes/app_router.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/home_search_bar.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/product_card.dart';
+import 'package:marketplace/src/features/widgets/k_text_button.dart';
 import 'package:marketplace/src/utilsresources/resources.dart';
 
 @RoutePage()
@@ -21,13 +24,25 @@ class HomeScreen extends StatelessWidget {
             floating: true,
             centerTitle: false,
             automaticallyImplyLeading: false,
-            title: Text(
-              "Бишкек, Микрорайон Восток-5 2/2",
-              style: Theme.of(context)
-                  .textTheme
-                  .labelLarge!
-                  .copyWith(color: AppColors.black),
-            ),
+            title: KTextBtn(
+                onPressed: () => _pushToDelivery(context),
+                title: Row(
+                  children: [
+                    Text(
+                      "Бишкек, Микрорайон Восток-5 2/2",
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelLarge!
+                          .copyWith(color: AppColors.black),
+                    ),
+                    10.horizontalSpace,
+                    Icon(
+                      Icons.arrow_drop_down,
+                      color: Colors.grey,
+                      size: 25.h,
+                    )
+                  ],
+                )),
             actions: [
               IconButton(
                   onPressed: () {},
@@ -38,8 +53,7 @@ class HomeScreen extends StatelessWidget {
                   ))
             ]),
         SliverToBoxAdapter(
-          child: Expanded(
-              child: CarouselSlider(
+          child: CarouselSlider(
             options: CarouselOptions(
                 disableCenter: false,
                 autoPlay: true,
@@ -56,10 +70,80 @@ class HomeScreen extends StatelessWidget {
                         fit: BoxFit.fill,
                       ),
                     )),
-          )),
+          ),
         ),
         const SliverAppBar(
           flexibleSpace: HomeSearchBar(),
+        ),
+        SliverPadding(
+          padding: REdgeInsets.fromLTRB(10, 0, 10, 10),
+          sliver: SliverToBoxAdapter(
+            child: Container(
+              width: double.infinity,
+              padding: REdgeInsets.all(16),
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(20)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 250.w,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Доставка в пути",
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleMedium!
+                              .copyWith(color: AppColors.violent),
+                        ),
+                        5.verticalSpace,
+                        Text(
+                          "28 Мая. Вам придет уведомление о поступлении.",
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodySmall!
+                              .copyWith(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: const BoxDecoration(color: AppColors.pink),
+                      ),
+                      5.verticalSpace,
+                      Text(
+                        S.of(context).share,
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodySmall!
+                            .copyWith(color: Colors.grey),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+        SliverPadding(
+          padding: REdgeInsets.fromLTRB(16, 20, 16, 16),
+          sliver: SliverToBoxAdapter(
+            child: Text(
+              S.of(context).specialForYou,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium!
+                  .copyWith(color: AppColors.black),
+            ),
+          ),
         ),
         SliverGrid.builder(
             itemCount: 20,
@@ -72,5 +156,9 @@ class HomeScreen extends StatelessWidget {
             itemBuilder: (_, index) => const ProductCard()),
       ],
     ));
+  }
+
+  void _pushToDelivery(BuildContext context) {
+    context.router.push(const DeliveryMethodRoute());
   }
 }

@@ -69,6 +69,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Пункт выдачи`
+  String get pickUpPoint {
+    return Intl.message(
+      'Пункт выдачи',
+      name: 'pickUpPoint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Курьер`
+  String get deliver {
+    return Intl.message(
+      'Курьер',
+      name: 'deliver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Заказать`
+  String get order {
+    return Intl.message(
+      'Заказать',
+      name: 'order',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Поделиться`
+  String get share {
+    return Intl.message(
+      'Поделиться',
+      name: 'share',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Подобрали для вас`
+  String get specialForYou {
+    return Intl.message(
+      'Подобрали для вас',
+      name: 'specialForYou',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Выбор способа доставки`
+  String get chooseOptions {
+    return Intl.message(
+      'Выбор способа доставки',
+      name: 'chooseOptions',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
