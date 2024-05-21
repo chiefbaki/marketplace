@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:marketplace/generated/l10n.dart';
-import 'package:marketplace/src/core/config/routes/app_router_names.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/k_button.dart';
 
@@ -57,6 +56,6 @@ class HomeSearchBar extends StatelessWidget {
   }
 
   void _pushToSearch(BuildContext context) {
-    context.push(RouterNames.home.name);
+    context.push("/search");
   }
 }
