@@ -1,20 +1,20 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/search_form_field.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/search_result_item.dart';
 import 'package:marketplace/src/features/widgets/k_text_button.dart';
 
-@RoutePage()
-class SearchScreen extends StatefulWidget {
-  const SearchScreen({super.key});
+
+class SearchPage extends StatefulWidget {
+  const SearchPage({super.key});
 
   @override
-  State<SearchScreen> createState() => _SearchScreenState();
+  State<SearchPage> createState() => _SearchPageState();
 }
 
-class _SearchScreenState extends State<SearchScreen> {
+class _SearchPageState extends State<SearchPage> {
   final _controller = TextEditingController();
   final _focusNode = FocusNode();
   @override
@@ -66,6 +66,6 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 
   void _pop(BuildContext context) {
-    context.router.maybePop();
+    context.pop();
   }
 }
