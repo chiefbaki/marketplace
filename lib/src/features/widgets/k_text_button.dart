@@ -14,6 +14,9 @@ class KTextBtn extends StatelessWidget {
     return TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
+            minimumSize: Size.zero,
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            padding: EdgeInsets.zero,
             overlayColor: AppColors.violent,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10).r)),

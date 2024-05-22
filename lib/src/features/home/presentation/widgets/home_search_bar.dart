@@ -13,8 +13,8 @@ class HomeSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(16.0).w,
-      padding: REdgeInsets.symmetric(horizontal: 20, vertical: 15).h,
+      margin: REdgeInsets.symmetric(horizontal: 16),
+      padding: REdgeInsets.symmetric(horizontal: 16, vertical: 15),
       decoration: BoxDecoration(
           color: AppColors.pink, borderRadius: BorderRadius.circular(40).r),
       child: Row(
@@ -56,6 +56,6 @@ class HomeSearchBar extends StatelessWidget {
   }
 
   void _pushToSearch(BuildContext context) {
-    context.push("/search");
+    context.push("/home/search");
   }
 }

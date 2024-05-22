@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:marketplace/generated/l10n.dart';
+import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/search_form_field.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/search_result_item.dart';
 import 'package:marketplace/src/features/widgets/k_text_button.dart';
 
-
-class SearchPage extends StatefulWidget {
-  const SearchPage({super.key});
+class HomeSearchPage extends StatefulWidget {
+  const HomeSearchPage({super.key});
 
   @override
-  State<SearchPage> createState() => _SearchPageState();
+  State<HomeSearchPage> createState() => _HomeSearchPageState();
 }
 
-class _SearchPageState extends State<SearchPage> {
+class _HomeSearchPageState extends State<HomeSearchPage> {
   final _controller = TextEditingController();
   final _focusNode = FocusNode();
   @override
@@ -45,7 +45,10 @@ class _SearchPageState extends State<SearchPage> {
                     onPressed: () => _pop(context),
                     title: Text(
                       S.of(context).cancel,
-                      style: Theme.of(context).textTheme.titleSmall,
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleSmall!
+                          .copyWith(color: AppColors.violent),
                     ),
                   )
                 ],

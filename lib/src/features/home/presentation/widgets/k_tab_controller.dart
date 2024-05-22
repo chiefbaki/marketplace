@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/k_elevated_btn.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/tab_bar_first_item.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/tab_bar_second_item.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/tab_item.dart';
 
 class KTabController extends StatefulWidget {
@@ -59,49 +59,9 @@ class _KTabControllerState extends State<KTabController> {
               ),
             ],
           ),
-          Expanded(
-            child: TabBarView(children: [
-              const TabBarFirstItem(),
-              Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Список пуст",
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleMedium!
-                          .copyWith(color: AppColors.black),
-                    ),
-                    const Spacer(),
-                    KElevatedBtn(
-                        widget: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.add,
-                              size: 20.h,
-                            ),
-                            4.horizontalSpace,
-                            Text(
-                              "Добавить адрес",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleSmall!
-                                  .copyWith(
-                                    color: AppColors.white,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                            )
-                          ],
-                        ),
-                        onPressed: () {}),
-                    20.verticalSpace,
-                  ],
-                ),
-              )
-            ]),
+          const Expanded(
+            child:
+                TabBarView(children: [TabBarFirstItem(), TabBarSecondItem()]),
           )
         ],
       ),

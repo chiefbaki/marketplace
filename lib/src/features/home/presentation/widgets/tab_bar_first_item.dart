@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/delivery_button.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/k_radio_list_tile.dart';
 
@@ -44,7 +45,25 @@ class _TabBarFirstItemState extends State<TabBarFirstItem> {
             },
           ),
           10.verticalSpace,
-          const DeliveryButton()
+          TransparentButton(
+            onPressed: () {},
+            child: Row(
+              children: [
+                Icon(
+                  Icons.add,
+                  color: AppColors.violent,
+                  size: 25.h,
+                ),
+                Text(
+                  "Добавить пункт выдачи",
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleSmall!
+                      .copyWith(color: AppColors.violent),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

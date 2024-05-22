@@ -6,5 +6,10 @@
   "order": "Заказать",
   "share": "Поделиться",
   "specialForYou": "Подобрали для вас",
-  "chooseOptions": "Выбор способа доставки"
+  "chooseOptions": "Выбор способа доставки",
+  "notifications": "Уведомления",
+  "listIsEmpty": "Список пуст",
+  "addAddress": "Добавить адрес",
+  "delete": "Удалить",
+  "notificationIsRemoved": "Уведомление удалено"
 }
