@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/k_button.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/buttons/k_button.dart';
 
 class SearchResult extends StatelessWidget {
   const SearchResult({

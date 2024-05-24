@@ -1,6 +1,5 @@
-
 import 'package:flutter/material.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/product_card.dart';
+
 
 class TestScreen extends StatelessWidget {
   const TestScreen({super.key});
@@ -13,7 +12,7 @@ class TestScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [ProductCard()],
+            children: [],
           ),
         ),
       ),

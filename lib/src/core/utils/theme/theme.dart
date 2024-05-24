@@ -17,7 +17,7 @@ ThemeData lightTheme() => ThemeData(
     useMaterial3: false,
     scaffoldBackgroundColor: AppColors.white,
     appBarTheme: const AppBarTheme(color: AppColors.white, elevation: 0),
-    primaryColorLight: AppColors.primaryLightColorColor,
+    primaryColorLight: AppColors.violent,
     textTheme: Typography.englishLike2014.apply(fontSizeFactor: 1.sp));
 
 OutlineInputBorder outlineBorder() {

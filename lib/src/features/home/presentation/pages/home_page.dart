@@ -4,10 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/home_search_bar.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/k_button.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/product_card.dart';
-import 'package:marketplace/src/features/widgets/k_text_button.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/fields/home_search_bar.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/buttons/k_button.dart';
+import 'package:marketplace/src/features/widgets/product_card.dart';
+import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
+import 'package:marketplace/src/features/widgets/buttons/k_text_button.dart';
 import 'package:marketplace/src/utilsresources/resources.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,9 +16,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: SafeArea(
-      child: RefreshIndicator.adaptive(
+    return ColoredSafeArea(
+      child: Scaffold(
+          body: RefreshIndicator.adaptive(
         displacement: 70,
         onRefresh: () async {
           debugPrint("refresh");
@@ -158,11 +159,32 @@ class HomePage extends StatelessWidget {
                     crossAxisSpacing: 20,
                     crossAxisCount: 2,
                     mainAxisSpacing: 5),
-                itemBuilder: (_, index) => const ProductCard()),
+                itemBuilder: (_, index) => ProductCard(
+                      widget: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.shopping_cart,
+                            size: 20.h,
+                          ),
+                          4.horizontalSpace,
+                          Text(
+                            "28 Май",
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleSmall!
+                                .copyWith(
+                                  color: AppColors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                          )
+                        ],
+                      ),
+                    )),
           ],
         ),
-      ),
-    ));
+      )),
+    );
   }
 
   void _pushToDelivery(BuildContext context) {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/k_elevated_btn.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/buttons/k_elevated_btn.dart';
 
 class TabBarSecondItem extends StatelessWidget {
   const TabBarSecondItem({

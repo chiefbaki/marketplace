@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/delivery_button.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/buttons/delivery_button.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/k_radio_list_tile.dart';
 
 class TabBarFirstItem extends StatefulWidget {

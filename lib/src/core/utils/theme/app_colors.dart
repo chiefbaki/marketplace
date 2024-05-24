@@ -5,7 +5,10 @@ abstract class AppColors {
   static const Color red = Colors.red;
   static const Color grey = Colors.grey;
   static const Color black = Colors.black;
+  static const Color scaffoldLightGreyColor =
+      Color.fromARGB(255, 240, 240, 240);
   static const Color orange = Colors.orange;
+  static const Color textFieldColor = Color.fromARGB(255, 230, 230, 230);
   static const Color darkPink = Color.fromARGB(
     255,
     245,

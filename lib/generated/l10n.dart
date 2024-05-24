@@ -179,6 +179,266 @@ class S {
       args: [],
     );
   }
+
+  /// `Скидка`
+  String get discount {
+    return Intl.message(
+      'Скидка',
+      name: 'discount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `до 30%`
+  String get up {
+    return Intl.message(
+      'до 30%',
+      name: 'up',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Оплата при получении`
+  String get paymentUponReceipt {
+    return Intl.message(
+      'Оплата при получении',
+      name: 'paymentUponReceipt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Мой баланс`
+  String get balance {
+    return Intl.message(
+      'Мой баланс',
+      name: 'balance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Открыть кошелек`
+  String get openWallet {
+    return Intl.message(
+      'Открыть кошелек',
+      name: 'openWallet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Доставки`
+  String get delivery {
+    return Intl.message(
+      'Доставки',
+      name: 'delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ближайщие: Сегодня`
+  String get upComing {
+    return Intl.message(
+      'Ближайщие: Сегодня',
+      name: 'upComing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Получите товары по `
+  String get getProductsBy {
+    return Intl.message(
+      'Получите товары по ',
+      name: 'getProductsBy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `QR-коду`
+  String get byQr {
+    return Intl.message(
+      'QR-коду',
+      name: 'byQr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Мои покупки`
+  String get myPurchases {
+    return Intl.message(
+      'Мои покупки',
+      name: 'myPurchases',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Оставьте отзывы на товары`
+  String get leaveReviewsForProducts {
+    return Intl.message(
+      'Оставьте отзывы на товары',
+      name: 'leaveReviewsForProducts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Лист ожидания`
+  String get waitingList {
+    return Intl.message(
+      'Лист ожидания',
+      name: 'waitingList',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Отложенные`
+  String get delayed {
+    return Intl.message(
+      'Отложенные',
+      name: 'delayed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Любимые бренды`
+  String get favouriteBrands {
+    return Intl.message(
+      'Любимые бренды',
+      name: 'favouriteBrands',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Вы смотрели`
+  String get youWatched {
+    return Intl.message(
+      'Вы смотрели',
+      name: 'youWatched',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `В корзину`
+  String get trash {
+    return Intl.message(
+      'В корзину',
+      name: 'trash',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Задать вопрос`
+  String get askQuestion {
+    return Intl.message(
+      'Задать вопрос',
+      name: 'askQuestion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Обратитесь к нам, если нужна консультация`
+  String get contactUsIfYouNeedAdvice {
+    return Intl.message(
+      'Обратитесь к нам, если нужна консультация',
+      name: 'contactUsIfYouNeedAdvice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Мои способы оплаты`
+  String get myPaymentMethods {
+    return Intl.message(
+      'Мои способы оплаты',
+      name: 'myPaymentMethods',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Возврат товара по браку`
+  String get returnOfDefectiveGoods {
+    return Intl.message(
+      'Возврат товара по браку',
+      name: 'returnOfDefectiveGoods',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Активные сеансы`
+  String get activeSessions {
+    return Intl.message(
+      'Активные сеансы',
+      name: 'activeSessions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Отображение цен`
+  String get displayPrices {
+    return Intl.message(
+      'Отображение цен',
+      name: 'displayPrices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Киргизский сом`
+  String get kyrgyzSom {
+    return Intl.message(
+      'Киргизский сом',
+      name: 'kyrgyzSom',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Политика конфиденциальности`
+  String get privacyPolicy {
+    return Intl.message(
+      'Политика конфиденциальности',
+      name: 'privacyPolicy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `О приложении`
+  String get aboutApp {
+    return Intl.message(
+      'О приложении',
+      name: 'aboutApp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Информация для клиентов`
+  String get InformationForClients {
+    return Intl.message(
+      'Информация для клиентов',
+      name: 'InformationForClients',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

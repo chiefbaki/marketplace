@@ -22,21 +22,58 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "InformationForClients":
+            MessageLookupByLibrary.simpleMessage("Информация для клиентов"),
+        "aboutApp": MessageLookupByLibrary.simpleMessage("О приложении"),
+        "activeSessions":
+            MessageLookupByLibrary.simpleMessage("Активные сеансы"),
         "addAddress": MessageLookupByLibrary.simpleMessage("Добавить адрес"),
+        "askQuestion": MessageLookupByLibrary.simpleMessage("Задать вопрос"),
+        "balance": MessageLookupByLibrary.simpleMessage("Мой баланс"),
+        "byQr": MessageLookupByLibrary.simpleMessage("QR-коду"),
         "cancel": MessageLookupByLibrary.simpleMessage("Отменить"),
         "chooseOptions":
             MessageLookupByLibrary.simpleMessage("Выбор способа доставки"),
+        "contactUsIfYouNeedAdvice": MessageLookupByLibrary.simpleMessage(
+            "Обратитесь к нам, если нужна консультация"),
+        "delayed": MessageLookupByLibrary.simpleMessage("Отложенные"),
         "delete": MessageLookupByLibrary.simpleMessage("Удалить"),
         "deliver": MessageLookupByLibrary.simpleMessage("Курьер"),
+        "delivery": MessageLookupByLibrary.simpleMessage("Доставки"),
+        "discount": MessageLookupByLibrary.simpleMessage("Скидка"),
+        "displayPrices":
+            MessageLookupByLibrary.simpleMessage("Отображение цен"),
+        "favouriteBrands":
+            MessageLookupByLibrary.simpleMessage("Любимые бренды"),
+        "getProductsBy":
+            MessageLookupByLibrary.simpleMessage("Получите товары по "),
+        "kyrgyzSom": MessageLookupByLibrary.simpleMessage("Киргизский сом"),
+        "leaveReviewsForProducts":
+            MessageLookupByLibrary.simpleMessage("Оставьте отзывы на товары"),
         "listIsEmpty": MessageLookupByLibrary.simpleMessage("Список пуст"),
+        "myPaymentMethods":
+            MessageLookupByLibrary.simpleMessage("Мои способы оплаты"),
+        "myPurchases": MessageLookupByLibrary.simpleMessage("Мои покупки"),
         "notificationIsRemoved":
             MessageLookupByLibrary.simpleMessage("Уведомление удалено"),
         "notifications": MessageLookupByLibrary.simpleMessage("Уведомления"),
+        "openWallet": MessageLookupByLibrary.simpleMessage("Открыть кошелек"),
         "order": MessageLookupByLibrary.simpleMessage("Заказать"),
+        "paymentUponReceipt":
+            MessageLookupByLibrary.simpleMessage("Оплата при получении"),
         "pickUpPoint": MessageLookupByLibrary.simpleMessage("Пункт выдачи"),
+        "privacyPolicy":
+            MessageLookupByLibrary.simpleMessage("Политика конфиденциальности"),
+        "returnOfDefectiveGoods":
+            MessageLookupByLibrary.simpleMessage("Возврат товара по браку"),
         "search": MessageLookupByLibrary.simpleMessage("Поиск"),
         "share": MessageLookupByLibrary.simpleMessage("Поделиться"),
         "specialForYou":
-            MessageLookupByLibrary.simpleMessage("Подобрали для вас")
+            MessageLookupByLibrary.simpleMessage("Подобрали для вас"),
+        "trash": MessageLookupByLibrary.simpleMessage("В корзину"),
+        "up": MessageLookupByLibrary.simpleMessage("до 30%"),
+        "upComing": MessageLookupByLibrary.simpleMessage("Ближайщие: Сегодня"),
+        "waitingList": MessageLookupByLibrary.simpleMessage("Лист ожидания"),
+        "youWatched": MessageLookupByLibrary.simpleMessage("Вы смотрели")
       };
 }

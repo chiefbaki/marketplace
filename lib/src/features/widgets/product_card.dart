@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/k_button.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/k_elevated_btn.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/buttons/k_button.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/buttons/k_elevated_btn.dart';
 import 'package:marketplace/src/utilsresources/resources.dart';
 
 class ProductCard extends StatelessWidget {
-  const ProductCard({
-    super.key,
-  });
+  final Widget widget;
+  const ProductCard({super.key, required this.widget});
 
   @override
   Widget build(BuildContext context) {
@@ -112,29 +111,7 @@ class ProductCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    KElevatedBtn(
-                      onPressed: () {},
-                      widget: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.shopping_cart,
-                            size: 20.h,
-                          ),
-                          4.horizontalSpace,
-                          Text(
-                            "28 Май",
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleSmall!
-                                .copyWith(
-                                  color: AppColors.white,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                          )
-                        ],
-                      ),
-                    )
+                    KElevatedBtn(onPressed: () {}, widget: widget)
                   ],
                 ),
               )

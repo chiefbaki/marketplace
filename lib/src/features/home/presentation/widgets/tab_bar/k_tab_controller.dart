@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/tab_bar_first_item.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/tab_bar_second_item.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/tab_item.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/tab_bar/tab_bar_first_item.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/tab_bar/tab_bar_second_item.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/tab_bar/tab_item.dart';
 
 class KTabController extends StatefulWidget {
   const KTabController({

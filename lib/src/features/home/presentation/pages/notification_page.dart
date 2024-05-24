@@ -4,45 +4,52 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/deliver_item_notification.dart';
-import 'package:marketplace/src/features/widgets/k_app_bar.dart';
-import 'package:marketplace/src/features/widgets/k_text_button.dart';
+import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
+import 'package:marketplace/src/features/widgets/app_bar/k_app_bar.dart';
+import 'package:marketplace/src/features/widgets/buttons/k_text_button.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: KAppBar(
-        title: S.of(context).notifications,
-        actions: [
-          PopupMenuButton(
-              elevation: 3,
-              icon: const Icon(
-                Icons.more_vert,
-                color: AppColors.violent,
-              ),
-              style: ButtonStyle(
-                  padding: WidgetStatePropertyAll(REdgeInsets.all(5))),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)),
-              position: PopupMenuPosition.under,
-              itemBuilder: (_) => [
-                    PopupMenuItem(
-                      child: PopupMenuItem(
-                          child: Text(
-                        S.of(context).delete,
-                        style: Theme.of(context)
-                            .textTheme
-                            .titleSmall!
-                            .copyWith(color: AppColors.red),
-                      )),
-                    )
-                  ])
-        ],
-      ),
-      body: Center(
-        child: Column(
+    return ColoredSafeArea(
+      child: Scaffold(
+        appBar: KAppBar(
+          title: Text(
+            S.of(context).notifications,
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium!
+                .copyWith(color: AppColors.black, fontWeight: FontWeight.w600),
+          ),
+          actions: [
+            PopupMenuButton(
+                elevation: 3,
+                icon: const Icon(
+                  Icons.more_vert,
+                  color: AppColors.violent,
+                ),
+                style: ButtonStyle(
+                    padding: WidgetStatePropertyAll(REdgeInsets.all(5))),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8)),
+                position: PopupMenuPosition.under,
+                itemBuilder: (_) => [
+                      PopupMenuItem(
+                        child: PopupMenuItem(
+                            child: Text(
+                          S.of(context).delete,
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleSmall!
+                              .copyWith(color: AppColors.red),
+                        )),
+                      )
+                    ])
+          ],
+        ),
+        body: Column(
           children: [
             Container(
               margin: REdgeInsets.symmetric(vertical: 20),
@@ -107,10 +114,6 @@ class NotificationPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15)),
               child: Row(
                 children: [
-                  Text(
-                    "2",
-                    style: Theme.of(context).textTheme.titleSmall,
-                  ),
                   5.horizontalSpace,
                   Expanded(
                     child: Text(

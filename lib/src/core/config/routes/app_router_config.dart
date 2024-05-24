@@ -21,7 +21,7 @@ class AppRouterConfig {
   static final _shellUserProfile =
       GlobalKey<NavigatorState>(debugLabel: "UserProfileKey");
   static GoRouter routes = GoRouter(
-      initialLocation: "/home/notification",
+      initialLocation: "/user-profile",
       navigatorKey: _rootKey,
       observers: [],
       debugLogDiagnostics: true,

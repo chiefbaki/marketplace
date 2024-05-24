@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 
 class KAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String title;
+  final Widget title;
   final List<Widget>? actions;
   const KAppBar({super.key, required this.title, this.actions});
 
@@ -18,13 +18,7 @@ class KAppBar extends StatelessWidget implements PreferredSizeWidget {
         onPressed: () => _pop(context),
       ),
       centerTitle: false,
-      title: Text(
-        title,
-        style: Theme.of(context)
-            .textTheme
-            .titleMedium!
-            .copyWith(color: AppColors.black, fontWeight: FontWeight.w600),
-      ),
+      title: title,
       actions: actions,
     );
   }
