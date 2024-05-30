@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       minTextAdapt: true,
       builder: (context, child) => MaterialApp.router(
-        title: "Marketplace",
+        title: "Markeplace",
         localizationsDelegates: const [
           S.delegate,
           GlobalMaterialLocalizations.delegate,

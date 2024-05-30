@@ -37,5 +37,20 @@
   "kyrgyzSom": "Киргизский сом",
   "privacyPolicy": "Политика конфиденциальности",
   "aboutApp": "О приложении",
-  "InformationForClients": "Информация для клиентов"
+  "InformationForClients": "Информация для клиентов",
+  "youPersonalDiscountonWB": "Ваша персональная скидка на Wildberries",
+  "ransomAmount": "Сумма выкупа",
+  "redemptionPercentage": "Процент выкупа",
+  "marketplace": "Marketplace",
+  "findTheBestPlaceForYourTrip": "Find the best place for your trip",
+  "explorennearYou": "Explore\nNear You!",
+  "explore": "Explore",
+  "goodsOfWeek": "Goods of week",
+  "main": "Main",
+  "basket": "Basket",
+  "profile": "Profile",
+  "category": "Category",
+  "welcome": "Welcome",
+  "byPopularity": "By popularity",
+  "filters": "Filters"
 }

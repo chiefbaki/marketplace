@@ -47,7 +47,7 @@ class DeliverItemNotification extends StatelessWidget {
               ),
               Icon(
                 Icons.notification_add,
-                color: AppColors.violent,
+                color: AppColors.primaryColor,
                 size: 35.h,
               )
             ],
@@ -70,7 +70,7 @@ class DeliverItemNotification extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .titleSmall!
-                      .copyWith(color: AppColors.violent),
+                      .copyWith(color: AppColors.primaryColor),
                 )),
           )
         ],

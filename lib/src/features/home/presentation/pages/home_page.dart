@@ -1,15 +1,21 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:marketplace/generated/l10n.dart';
+import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/fields/home_search_bar.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/buttons/k_button.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/banner.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/c_carousel.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/fields/c_static_search_bar.dart';
 import 'package:marketplace/src/features/widgets/product_card.dart';
 import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
-import 'package:marketplace/src/features/widgets/buttons/k_text_button.dart';
-import 'package:marketplace/src/utilsresources/resources.dart';
+import 'package:marketplace/src/utils/resources/resources.dart';
+
+const double _unit = 16;
+const double _horizontalUnit = 24;
+final REdgeInsets _rEdgeInsetsHorizontal =
+    REdgeInsets.fromLTRB(_unit, _horizontalUnit, _unit, _horizontalUnit);
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -25,162 +31,117 @@ class HomePage extends StatelessWidget {
         },
         child: CustomScrollView(
           slivers: [
-            SliverAppBar(
-                snap: true,
-                floating: true,
-                centerTitle: false,
-                automaticallyImplyLeading: false,
-                title: KTextBtn(
-                    onPressed: () => _pushToDelivery(context),
-                    title: Row(
-                      children: [
-                        Text(
-                          "Бишкек, Микрорайон Восток-5 2/2",
-                          style: Theme.of(context)
-                              .textTheme
-                              .labelLarge!
-                              .copyWith(color: AppColors.black),
-                        ),
-                        10.horizontalSpace,
-                        Icon(
-                          Icons.arrow_drop_down,
-                          color: Colors.grey,
-                          size: 25.h,
-                        )
-                      ],
-                    )),
-                actions: [
-                  KButton(
-                      onPressed: () {
-                        _pushToNotification(context);
-                      },
-                      icon: Icons.notifications_none)
-                ]),
-            SliverToBoxAdapter(
-              child: CarouselSlider(
-                options: CarouselOptions(
-                    disableCenter: false,
-                    autoPlay: true,
-                    height: 180,
-                    viewportFraction: 1.255),
-                items: List.generate(
-                    6,
-                    (index) => Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20).r),
-                          child: Image.asset(
-                            Images.add,
-                            width: 350.w,
-                            fit: BoxFit.fill,
-                          ),
-                        )),
-              ),
-            ),
             SliverPadding(
-              padding: REdgeInsets.symmetric(vertical: 30),
-              sliver: const SliverAppBar(
-                flexibleSpace: HomeSearchBar(),
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: Container(
-                margin: REdgeInsets.fromLTRB(10, 0, 10, 10),
-                width: double.infinity,
-                padding: REdgeInsets.all(16),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(20)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      width: 250.w,
-                      child: Column(
+              padding: _rEdgeInsetsHorizontal,
+              sliver: SliverAppBar(
+                  snap: true,
+                  floating: true,
+                  centerTitle: false,
+                  automaticallyImplyLeading: false,
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Доставка в пути",
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleMedium!
-                                .copyWith(color: AppColors.violent),
+                            "Привет, Бермет",
+                            style: context.textTheme.titleSmall!
+                                .copyWith(color: AppColors.grey),
                           ),
-                          5.verticalSpace,
+                          4.verticalSpace,
                           Text(
-                            "28 Мая. Вам придет уведомление о поступлении.",
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodySmall!
-                                .copyWith(color: Colors.grey),
-                          ),
+                            S.of(context).welcome,
+                            style: context.textTheme.titleMedium!.copyWith(
+                                color: AppColors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          )
                         ],
                       ),
+                      CircleAvatar(
+                        radius: 20.r,
+                        child: Image.asset(
+                          Images.ava,
+                        ),
+                      )
+                    ],
+                  )),
+            ),
+            SliverPadding(
+              padding: REdgeInsets.symmetric(horizontal: _horizontalUnit),
+              sliver: const SliverAppBar(
+                flexibleSpace: CStaticSearchBar(),
+              ),
+            ),
+            SliverPadding(
+              padding: _rEdgeInsetsHorizontal,
+              sliver: const SliverToBoxAdapter(
+                child: HomePageBanner(),
+              ),
+            ),
+            SliverPadding(
+              padding: _rEdgeInsetsHorizontal,
+              sliver: const SliverToBoxAdapter(
+                child: CCarousel(),
+              ),
+            ),
+            SliverPadding(
+              padding: _rEdgeInsetsHorizontal,
+              sliver: SliverToBoxAdapter(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      S.of(context).goodsOfWeek,
+                      style: context.textTheme.titleMedium!.copyWith(
+                          color: AppColors.black,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18),
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration:
-                              const BoxDecoration(color: AppColors.pink),
-                        ),
-                        5.verticalSpace,
-                        Text(
-                          S.of(context).share,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodySmall!
-                              .copyWith(color: Colors.grey),
-                        ),
-                      ],
-                    )
+                    SvgPicture.asset(Images.arrowRight)
                   ],
                 ),
               ),
             ),
+            SliverToBoxAdapter(
+              child: SizedBox(
+                width: context.width,
+                height: context.height * 0.35,
+                child: ListView.builder(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (_, index) => const ProductCard()),
+              ),
+            ),
             SliverPadding(
-              padding: REdgeInsets.fromLTRB(16, 20, 16, 16),
+              padding: _rEdgeInsetsHorizontal,
               sliver: SliverToBoxAdapter(
-                child: Text(
-                  S.of(context).specialForYou,
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleMedium!
-                      .copyWith(color: AppColors.black),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      S.of(context).goodsOfWeek,
+                      style: context.textTheme.titleMedium!.copyWith(
+                          color: AppColors.black,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18),
+                    ),
+                    SvgPicture.asset(Images.arrowRight)
+                  ],
                 ),
               ),
             ),
-            SliverGrid.builder(
-                itemCount: 20,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    childAspectRatio: MediaQuery.of(context).size.width /
-                        (MediaQuery.of(context).size.height / 1),
-                    crossAxisSpacing: 20,
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 5),
-                itemBuilder: (_, index) => ProductCard(
-                      widget: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.shopping_cart,
-                            size: 20.h,
-                          ),
-                          4.horizontalSpace,
-                          Text(
-                            "28 Май",
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleSmall!
-                                .copyWith(
-                                  color: AppColors.white,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                          )
-                        ],
-                      ),
-                    )),
+            SliverToBoxAdapter(
+              child: SizedBox(
+                width: context.width,
+                height: context.height * 0.35,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (_, index) => const ProductCard()),
+              ),
+            )
           ],
         ),
       )),

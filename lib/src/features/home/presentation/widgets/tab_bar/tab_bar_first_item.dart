@@ -51,7 +51,7 @@ class _TabBarFirstItemState extends State<TabBarFirstItem> {
               children: [
                 Icon(
                   Icons.add,
-                  color: AppColors.violent,
+                  color: AppColors.primaryColor,
                   size: 25.h,
                 ),
                 Text(
@@ -59,7 +59,7 @@ class _TabBarFirstItemState extends State<TabBarFirstItem> {
                   style: Theme.of(context)
                       .textTheme
                       .titleSmall!
-                      .copyWith(color: AppColors.violent),
+                      .copyWith(color: AppColors.primaryColor),
                 )
               ],
             ),

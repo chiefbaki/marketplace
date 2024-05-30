@@ -3,14 +3,16 @@ import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 
 class ColoredSafeArea extends StatelessWidget {
   final Widget child;
-  final Color color;
-  const ColoredSafeArea(
-      {super.key, required this.child, this.color = AppColors.violent});
+
+  const ColoredSafeArea({
+    super.key,
+    required this.child,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: color),
+      decoration: BoxDecoration(color: AppColors.primaryColor),
       child: SafeArea(child: child),
     );
   }

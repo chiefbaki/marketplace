@@ -30,8 +30,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "addAddress": MessageLookupByLibrary.simpleMessage("Добавить адрес"),
         "askQuestion": MessageLookupByLibrary.simpleMessage("Задать вопрос"),
         "balance": MessageLookupByLibrary.simpleMessage("Мой баланс"),
+        "basket": MessageLookupByLibrary.simpleMessage("Basket"),
+        "byPopularity": MessageLookupByLibrary.simpleMessage("By popularity"),
         "byQr": MessageLookupByLibrary.simpleMessage("QR-коду"),
         "cancel": MessageLookupByLibrary.simpleMessage("Отменить"),
+        "category": MessageLookupByLibrary.simpleMessage("Category"),
         "chooseOptions":
             MessageLookupByLibrary.simpleMessage("Выбор способа доставки"),
         "contactUsIfYouNeedAdvice": MessageLookupByLibrary.simpleMessage(
@@ -43,14 +46,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "discount": MessageLookupByLibrary.simpleMessage("Скидка"),
         "displayPrices":
             MessageLookupByLibrary.simpleMessage("Отображение цен"),
+        "explore": MessageLookupByLibrary.simpleMessage("Explore"),
+        "explorennearYou":
+            MessageLookupByLibrary.simpleMessage("Explore\nNear You!"),
         "favouriteBrands":
             MessageLookupByLibrary.simpleMessage("Любимые бренды"),
+        "filters": MessageLookupByLibrary.simpleMessage("Filters"),
+        "findTheBestPlaceForYourTrip": MessageLookupByLibrary.simpleMessage(
+            "Find the best place for your trip"),
         "getProductsBy":
             MessageLookupByLibrary.simpleMessage("Получите товары по "),
+        "goodsOfWeek": MessageLookupByLibrary.simpleMessage("Goods of week"),
         "kyrgyzSom": MessageLookupByLibrary.simpleMessage("Киргизский сом"),
         "leaveReviewsForProducts":
             MessageLookupByLibrary.simpleMessage("Оставьте отзывы на товары"),
         "listIsEmpty": MessageLookupByLibrary.simpleMessage("Список пуст"),
+        "main": MessageLookupByLibrary.simpleMessage("Main"),
+        "marketplace": MessageLookupByLibrary.simpleMessage("Marketplace"),
         "myPaymentMethods":
             MessageLookupByLibrary.simpleMessage("Мои способы оплаты"),
         "myPurchases": MessageLookupByLibrary.simpleMessage("Мои покупки"),
@@ -64,6 +76,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "pickUpPoint": MessageLookupByLibrary.simpleMessage("Пункт выдачи"),
         "privacyPolicy":
             MessageLookupByLibrary.simpleMessage("Политика конфиденциальности"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "ransomAmount": MessageLookupByLibrary.simpleMessage("Сумма выкупа"),
+        "redemptionPercentage":
+            MessageLookupByLibrary.simpleMessage("Процент выкупа"),
         "returnOfDefectiveGoods":
             MessageLookupByLibrary.simpleMessage("Возврат товара по браку"),
         "search": MessageLookupByLibrary.simpleMessage("Поиск"),
@@ -74,6 +90,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "up": MessageLookupByLibrary.simpleMessage("до 30%"),
         "upComing": MessageLookupByLibrary.simpleMessage("Ближайщие: Сегодня"),
         "waitingList": MessageLookupByLibrary.simpleMessage("Лист ожидания"),
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
+        "youPersonalDiscountonWB": MessageLookupByLibrary.simpleMessage(
+            "Ваша персональная скидка на Wildberries"),
         "youWatched": MessageLookupByLibrary.simpleMessage("Вы смотрели")
       };
 }

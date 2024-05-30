@@ -33,15 +33,15 @@ class _KTabControllerState extends State<KTabController> {
               });
             },
             labelStyle: Theme.of(context).textTheme.titleSmall!,
-            labelColor: AppColors.violent,
-            indicatorColor: AppColors.violent,
+            labelColor: AppColors.primaryColor,
+            indicatorColor: AppColors.primaryColor,
             unselectedLabelColor: Colors.grey,
             unselectedLabelStyle: Theme.of(context).textTheme.titleSmall!,
             dividerHeight: 10,
             dividerColor: AppColors.black,
             splashBorderRadius: BorderRadius.circular(2),
             overlayColor:
-                WidgetStatePropertyAll(AppColors.violent.withOpacity(0.2)),
+                WidgetStatePropertyAll(AppColors.primaryColor.withOpacity(0.2)),
             tabs: [
               Tab(
                 child: TabItem(

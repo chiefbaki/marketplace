@@ -439,6 +439,156 @@ class S {
       args: [],
     );
   }
+
+  /// `Ваша персональная скидка на Wildberries`
+  String get youPersonalDiscountonWB {
+    return Intl.message(
+      'Ваша персональная скидка на Wildberries',
+      name: 'youPersonalDiscountonWB',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Сумма выкупа`
+  String get ransomAmount {
+    return Intl.message(
+      'Сумма выкупа',
+      name: 'ransomAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Процент выкупа`
+  String get redemptionPercentage {
+    return Intl.message(
+      'Процент выкупа',
+      name: 'redemptionPercentage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Marketplace`
+  String get marketplace {
+    return Intl.message(
+      'Marketplace',
+      name: 'marketplace',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Find the best place for your trip`
+  String get findTheBestPlaceForYourTrip {
+    return Intl.message(
+      'Find the best place for your trip',
+      name: 'findTheBestPlaceForYourTrip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Explore\nNear You!`
+  String get explorennearYou {
+    return Intl.message(
+      'Explore\nNear You!',
+      name: 'explorennearYou',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Explore`
+  String get explore {
+    return Intl.message(
+      'Explore',
+      name: 'explore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Goods of week`
+  String get goodsOfWeek {
+    return Intl.message(
+      'Goods of week',
+      name: 'goodsOfWeek',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Main`
+  String get main {
+    return Intl.message(
+      'Main',
+      name: 'main',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Basket`
+  String get basket {
+    return Intl.message(
+      'Basket',
+      name: 'basket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Category`
+  String get category {
+    return Intl.message(
+      'Category',
+      name: 'category',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome`
+  String get welcome {
+    return Intl.message(
+      'Welcome',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By popularity`
+  String get byPopularity {
+    return Intl.message(
+      'By popularity',
+      name: 'byPopularity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Filters`
+  String get filters {
+    return Intl.message(
+      'Filters',
+      name: 'filters',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

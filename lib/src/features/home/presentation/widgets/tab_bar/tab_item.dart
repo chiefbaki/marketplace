@@ -19,7 +19,7 @@ class TabItem extends StatelessWidget {
       children: [
         Icon(
           icon,
-          color: isSelected ? AppColors.violent : Colors.grey,
+          color: isSelected ? AppColors.primaryColor : Colors.grey,
         ),
         15.horizontalSpace,
         Text(

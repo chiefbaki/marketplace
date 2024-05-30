@@ -16,7 +16,7 @@ class KElevatedBtn extends StatelessWidget {
             // maximumSize: const Size(200, 40),
             // minimumSize: const Size(200, 40),
             padding: REdgeInsets.symmetric(horizontal: 20, vertical: 11),
-            backgroundColor: AppColors.violent,
+            backgroundColor: AppColors.primaryColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             )),

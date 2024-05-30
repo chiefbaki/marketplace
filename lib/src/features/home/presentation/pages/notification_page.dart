@@ -26,9 +26,9 @@ class NotificationPage extends StatelessWidget {
           actions: [
             PopupMenuButton(
                 elevation: 3,
-                icon: const Icon(
+                icon: Icon(
                   Icons.more_vert,
-                  color: AppColors.violent,
+                  color: AppColors.primaryColor,
                 ),
                 style: ButtonStyle(
                     padding: WidgetStatePropertyAll(REdgeInsets.all(5))),
@@ -124,11 +124,7 @@ class NotificationPage extends StatelessWidget {
                           .copyWith(fontWeight: FontWeight.w500),
                     ),
                   ),
-                  KTextBtn(
-                      onPressed: () {},
-                      title: Text(
-                        S.of(context).cancel,
-                      ))
+                  CTextBtn(onPressed: () {}, title: "")
                 ],
               ),
             )

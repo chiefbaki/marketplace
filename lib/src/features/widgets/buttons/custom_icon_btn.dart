@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/utilsresources/resources.dart';
+import 'package:marketplace/src/utils/resources/resources.dart';
+
 
 class CustomIconBtn extends StatelessWidget {
   const CustomIconBtn({
@@ -30,7 +31,7 @@ class CustomIconBtn extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .titleSmall!
-                  .copyWith(color: AppColors.violent),
+                  .copyWith(color: AppColors.primaryColor),
             )
           ],
         ));

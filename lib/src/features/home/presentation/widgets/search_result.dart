@@ -20,8 +20,8 @@ class SearchResult extends StatelessWidget {
                 borderSide: BorderSide(color: Colors.grey)),
             suffixIcon: KButton(
               onPressed: () {},
-              icon: Icons.close,
-              color: Colors.grey,
+              icon: const SizedBox(),
+              iconColor: Colors.grey,
             )));
   }
 }

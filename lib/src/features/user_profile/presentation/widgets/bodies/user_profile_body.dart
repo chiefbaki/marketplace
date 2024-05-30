@@ -9,7 +9,7 @@ import 'package:marketplace/src/features/widgets/background/colored_container.da
 import 'package:marketplace/src/features/widgets/buttons/custom_icon_btn.dart';
 import 'package:marketplace/src/features/widgets/product_card.dart';
 import 'package:marketplace/src/features/user_profile/presentation/widgets/user_info_profile_widget.dart';
-import 'package:marketplace/src/utilsresources/resources.dart';
+import 'package:marketplace/src/utils/resources/resources.dart';
 
 const double _radius = 15;
 const double _paddingUnit = 6;
@@ -45,7 +45,7 @@ class UserProfileBody extends StatelessWidget {
                         onPressed: () {
                           _pushToNotification(context);
                         },
-                        icon: Icons.notifications_none)
+                        icon: const SizedBox())
                   ],
                 ),
                 20.verticalSpace,
@@ -69,7 +69,7 @@ class UserProfileBody extends StatelessWidget {
                                       .titleSmall!
                                       .copyWith(color: AppColors.grey),
                                 ),
-                                const Icon(
+                                Icon(
                                   Icons.keyboard_arrow_right,
                                   color: AppColors.grey,
                                 )
@@ -108,7 +108,7 @@ class UserProfileBody extends StatelessWidget {
                                       .bodySmall!
                                       .copyWith(color: AppColors.grey),
                                 ),
-                                const Icon(
+                                Icon(
                                   Icons.keyboard_arrow_right,
                                   color: AppColors.grey,
                                 )
@@ -148,7 +148,7 @@ class UserProfileBody extends StatelessWidget {
                                     .bodyMedium!
                                     .copyWith(color: AppColors.grey),
                               ),
-                              const Icon(
+                              Icon(
                                 Icons.keyboard_arrow_right,
                                 color: AppColors.grey,
                               )
@@ -222,7 +222,7 @@ class UserProfileBody extends StatelessWidget {
                                   style: Theme.of(context)
                                       .textTheme
                                       .titleSmall!
-                                      .copyWith(color: AppColors.violent)),
+                                      .copyWith(color: AppColors.primaryColor)),
                               TextSpan(
                                   text: "\nили коду 98568",
                                   style: Theme.of(context)
@@ -288,18 +288,7 @@ class UserProfileBody extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  ProductCard(
-                                    widget: Text(
-                                      S.of(context).trash,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleSmall!
-                                          .copyWith(
-                                            color: AppColors.white,
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                    ),
-                                  ),
+                                  ProductCard(),
                                   Padding(
                                     padding: REdgeInsets.only(left: 10),
                                     child: Row(
@@ -340,7 +329,7 @@ class UserProfileBody extends StatelessWidget {
             child: UserProfileInfoWidget(
               title: S.of(context).favouriteBrands,
               icon: Icons.message,
-              color: AppColors.violent,
+              color: AppColors.primaryColor,
               size: 40.h,
               widget: Text(
                 S.of(context).contactUsIfYouNeedAdvice,
@@ -424,7 +413,7 @@ class UserProfileBody extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .titleSmall!
-                .copyWith(color: AppColors.violent),
+                .copyWith(color: AppColors.primaryColor),
           ),
           10.verticalSpace,
           Text(
@@ -432,7 +421,7 @@ class UserProfileBody extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .titleSmall!
-                .copyWith(color: AppColors.violent),
+                .copyWith(color: AppColors.primaryColor),
           ),
           20.verticalSpace,
         ],

@@ -11,7 +11,7 @@ class KAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       leading: BackButton(
-        color: AppColors.violent,
+        color: AppColors.primaryColor,
         style: const ButtonStyle(
           side: WidgetStatePropertyAll(BorderSide(width: 5)),
         ),

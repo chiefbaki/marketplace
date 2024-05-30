@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 
 ThemeData lightTheme() => ThemeData(
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
       elevation: 1,
-      selectedItemColor: AppColors.violent,
+      selectedItemColor: AppColors.primaryLightColor,
       unselectedItemColor: Colors.grey,
       type: BottomNavigationBarType.fixed,
     ),
@@ -15,9 +15,9 @@ ThemeData lightTheme() => ThemeData(
     inputDecorationTheme: const InputDecorationTheme(),
     brightness: Brightness.light,
     useMaterial3: false,
-    scaffoldBackgroundColor: AppColors.white,
-    appBarTheme: const AppBarTheme(color: AppColors.white, elevation: 0),
-    primaryColorLight: AppColors.violent,
+    scaffoldBackgroundColor: AppColors.primaryColor,
+    appBarTheme: AppBarTheme(color: AppColors.primaryColor, elevation: 0),
+    primaryColorLight: AppColors.primaryColor,
     textTheme: Typography.englishLike2014.apply(fontSizeFactor: 1.sp));
 
 OutlineInputBorder outlineBorder() {

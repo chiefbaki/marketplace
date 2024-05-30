@@ -14,11 +14,11 @@ class TransparentButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
             elevation: 0,
-            overlayColor: AppColors.violent,
+            overlayColor: AppColors.primaryColor,
             maximumSize: const Size(250, 50),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
-                side: const BorderSide(color: AppColors.violent)),
+                side: BorderSide(color: AppColors.primaryColor)),
             backgroundColor: AppColors.white,
             padding: EdgeInsets.symmetric(vertical: 6.h, horizontal: 10.w)),
         child: Center(

@@ -1,39 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/buttons/c_elevated_button.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/buttons/k_button.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/buttons/k_elevated_btn.dart';
-import 'package:marketplace/src/utilsresources/resources.dart';
+import 'package:marketplace/src/utils/resources/resources.dart';
 
 class ProductCard extends StatelessWidget {
-  final Widget widget;
-  const ProductCard({super.key, required this.widget});
+  const ProductCard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SizedBox(
+        Container(
+          margin: REdgeInsets.only(left: 16),
+          padding: REdgeInsets.all(8),
+          constraints: const BoxConstraints(
+            maxWidth: 200,
+          ).w,
+          decoration: BoxDecoration(
+              color: AppColors.white,
+              borderRadius: BorderRadius.circular(12).r),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              Container(
-                decoration: BoxDecoration(
-                    color: AppColors.pink,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Image.asset(
-                  Images.card,
-                  height: 220.h,
-                  width: 180.w,
-                  fit: BoxFit.fill,
-                ),
-              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Center(
+                      child: Image.asset(
+                        Images.prod,
+                        width: 40.w,
+                        height: 100.h,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    12.verticalSpace,
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "1025 c",
@@ -44,86 +53,48 @@ class ProductCard extends StatelessWidget {
                                   color: AppColors.black,
                                   fontWeight: FontWeight.w600),
                         ),
-                        5.horizontalSpace,
-                        Text(
-                          "1025 c",
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleSmall!
-                              .copyWith(
-                                  color: Colors.grey,
-                                  fontWeight: FontWeight.w600,
-                                  decoration: TextDecoration.lineThrough),
-                        ),
-                      ],
-                    ),
-                    7.verticalSpace,
-                    Text(
-                      "Aksdom",
-                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                          color: AppColors.black, fontWeight: FontWeight.w400),
-                    ),
-                    4.verticalSpace,
-                    Text(
-                      "Переходник для macbook type",
-                      overflow: TextOverflow.ellipsis,
-                      softWrap: true,
-                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                            color: AppColors.black,
-                            fontWeight: FontWeight.w400,
-                          ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        KButton(
+                        CElevatedButton(
                           onPressed: () {},
-                          icon: Icons.star,
-                          color: AppColors.orange,
-                          size: 25.h,
-                        ),
-                        Text(
-                          "4,7",
-                          overflow: TextOverflow.ellipsis,
-                          softWrap: true,
-                          style:
-                              Theme.of(context).textTheme.titleSmall!.copyWith(
-                                    color: AppColors.black,
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                        ),
-                        5.horizontalSpace,
-                        const Text(
-                          "•",
-                          style: TextStyle(color: Colors.grey, fontSize: 20),
-                        ),
-                        5.horizontalSpace,
-                        Text(
-                          "690 оценок",
-                          overflow: TextOverflow.ellipsis,
-                          softWrap: true,
-                          style:
-                              Theme.of(context).textTheme.titleSmall!.copyWith(
-                                    color: Colors.grey,
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                        ),
+                          color: AppColors.pinkSalt,
+                          text: "-20%",
+                          hor: 6,
+                          ver: 2,
+                          textColor: AppColors.hotPink,
+                        )
                       ],
                     ),
-                    KElevatedBtn(onPressed: () {}, widget: widget)
+                    4.horizontalSpace,
+                    Text(
+                      "1025 c",
+                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w600,
+                          decoration: TextDecoration.lineThrough),
+                    ),
+                    8.verticalSpace,
+                    Text(
+                      "Эмульсия G.LOVE для умывания с азиатской центелой",
+                      maxLines: 3,
+                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                          color: AppColors.black,
+                          fontWeight: FontWeight.w400,
+                          height: 1.2),
+                    ),
                   ],
                 ),
               )
             ],
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            KButton(onPressed: () {}, icon: Icons.search),
-            KButton(onPressed: () {}, icon: Icons.favorite)
-          ],
+        Positioned(
+          right: 30,
+          top: 10,
+          child: KButton(
+              onPressed: () {},
+              icon: SvgPicture.asset(
+                Images.vector,
+                height: 19.h,
+              )),
         )
       ],
     );

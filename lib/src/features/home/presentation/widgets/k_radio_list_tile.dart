@@ -22,8 +22,8 @@ class KRadioListTile extends StatelessWidget {
     return Column(
       children: [
         RadioListTile(
-          fillColor: const WidgetStatePropertyAll(AppColors.violent),
-          selectedTileColor: AppColors.violent,
+          fillColor: WidgetStatePropertyAll(AppColors.primaryColor),
+          selectedTileColor: AppColors.primaryColor,
           value: value,
           groupValue: currentOption,
           title: Row(

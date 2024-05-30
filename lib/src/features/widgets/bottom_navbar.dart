@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:marketplace/generated/l10n.dart';
+import 'package:marketplace/src/core/utils/theme/app_colors.dart';
+import 'package:marketplace/src/utils/resources/resources.dart';
 
 class KBottomNavBar extends StatefulWidget {
   final Widget child;
@@ -12,42 +16,52 @@ class KBottomNavBar extends StatefulWidget {
 
 class _KBottomNavBarState extends State<KBottomNavBar> {
   int _currentIndex = 0;
+  int _value = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: widget.child,
-      bottomNavigationBar: BottomNavigationBar(
-          onTap: (value) {
-            _chandeTab(value, context);
-          },
-          currentIndex: _currentIndex,
-          items: [
-            BottomNavigationBarItem(
-                label: "",
-                icon: Icon(
-                  Icons.home,
-                  size: 25.h,
-                )),
-            BottomNavigationBarItem(
-                label: "",
-                icon: Icon(
-                  Icons.search,
-                  size: 25.h,
-                )),
-            BottomNavigationBarItem(
-                label: "",
-                icon: Icon(
-                  Icons.shopping_basket,
-                  size: 25.h,
-                )),
-            BottomNavigationBarItem(
-                label: "",
-                icon: Icon(
-                  Icons.info,
-                  size: 25.h,
-                )),
-          ]),
-    );
+        extendBody: true,
+        body: widget.child,
+        bottomNavigationBar: ClipRRect(
+          borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+          child: BottomNavigationBar(
+              selectedItemColor: AppColors.primaryLightColor,
+              onTap: (value) {
+                _value = value;
+                _chandeTab(_value, context);
+              },
+              currentIndex: _currentIndex,
+              items: [
+                BottomNavigationBarItem(
+                    label: S.of(context).main,
+                    icon: SvgPicture.asset(
+                      Images.home2,
+                      height: 24.h,
+                      color: _currentIndex == _value
+                          ? AppColors.primaryLightColor
+                          : AppColors.grey,
+                    )),
+                BottomNavigationBarItem(
+                    label: S.of(context).search,
+                    icon: SvgPicture.asset(
+                      Images.searchNormal,
+                      height: 24.h,
+                    )),
+                BottomNavigationBarItem(
+                    label: S.of(context).basket,
+                    icon: SvgPicture.asset(
+                      Images.shoppingCart,
+                      height: 24.h,
+                    )),
+                BottomNavigationBarItem(
+                    label: S.of(context).profile,
+                    icon: SvgPicture.asset(
+                      Images.profile,
+                      height: 24.h,
+                    )),
+              ]),
+        ));
   }
 
   void _chandeTab(int index, BuildContext context) {
