@@ -20,6 +20,7 @@ abstract class AppColors {
   );
   static Color primaryLightColor = ColorExt.fromHex("#FFB6C3");
   static Color primaryColor = ColorExt.fromHex("#FFECEF");
+  static Color lightGrey = ColorExt.fromHex("#EBEBEB");
   static Color navyBlue = ColorExt.fromHex("#585DE4");
   static Color pinkSalt = ColorExt.fromHex("#FFCDD6");
   static Color hotPink = ColorExt.fromHex("#FF2D55");

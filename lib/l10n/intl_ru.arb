@@ -52,5 +52,18 @@
   "category": "Category",
   "welcome": "Welcome",
   "byPopularity": "By popularity",
-  "filters": "Filters"
+  "filters": "Filters",
+  "myProfile": "My profile",
+  "price": "Цена",
+  "addToBasket": "Add to basket",
+  "description": "Description",
+  "property": "Property",
+  "characteristics": "Characteristics",
+  "orderProduct": "Order product",
+  "theOrder": "Заказ",
+  "paymentMethods": "Payment Methods",
+  "linkACard": "Link a card",
+  "color": "Color",
+  "total": "Total",
+  "deliveryPrice": "Доставка"
 }

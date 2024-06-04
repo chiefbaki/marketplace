@@ -26,6 +26,7 @@ class _KBottomNavBarState extends State<KBottomNavBar> {
           borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(20), topRight: Radius.circular(20)),
           child: BottomNavigationBar(
+              backgroundColor: AppColors.white,
               selectedItemColor: AppColors.primaryLightColor,
               onTap: (value) {
                 _value = value;
@@ -76,7 +77,7 @@ class _KBottomNavBarState extends State<KBottomNavBar> {
         context.go("/basket");
         break;
       case 3:
-        context.go("/user-profile");
+        context.go("/user");
         break;
     }
     setState(() {

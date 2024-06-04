@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class KButton extends StatelessWidget {
+class CButton extends StatelessWidget {
   final Function() onPressed;
   final Widget icon;
   final Color? iconColor;
   final double size;
-  const KButton(
+  const CButton(
       {super.key,
       required this.onPressed,
       required this.icon,

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/buttons/c_elevated_button.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/buttons/k_button.dart';
+import 'package:marketplace/src/features/widgets/buttons/c_icon_button.dart';
+import 'package:marketplace/src/features/widgets/dicsount_container.dart';
 import 'package:marketplace/src/utils/resources/resources.dart';
 
 class ProductCard extends StatelessWidget {
@@ -53,14 +53,7 @@ class ProductCard extends StatelessWidget {
                                   color: AppColors.black,
                                   fontWeight: FontWeight.w600),
                         ),
-                        CElevatedButton(
-                          onPressed: () {},
-                          color: AppColors.pinkSalt,
-                          text: "-20%",
-                          hor: 6,
-                          ver: 2,
-                          textColor: AppColors.hotPink,
-                        )
+                        const DiscountContainer()
                       ],
                     ),
                     4.horizontalSpace,
@@ -89,7 +82,7 @@ class ProductCard extends StatelessWidget {
         Positioned(
           right: 30,
           top: 10,
-          child: KButton(
+          child: CButton(
               onPressed: () {},
               icon: SvgPicture.asset(
                 Images.vector,

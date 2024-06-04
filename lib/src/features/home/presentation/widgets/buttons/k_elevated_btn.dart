@@ -3,10 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 
 class KElevatedBtn extends StatelessWidget {
-  final Widget widget;
+  final String text;
   final void Function() onPressed;
-  const KElevatedBtn(
-      {super.key, required this.widget, required this.onPressed});
+  const KElevatedBtn({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +19,6 @@ class KElevatedBtn extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             )),
-        child: widget);
+        child: Text(text));
   }
 }

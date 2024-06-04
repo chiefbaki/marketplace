@@ -20,7 +20,7 @@ class SearchFormField extends StatelessWidget {
     return TextFormField(
       textInputAction: textInputAction,
       mouseCursor: SystemMouseCursors.alias,
-      scrollPadding: EdgeInsets.all(10),
+      keyboardType: TextInputType.text,
       focusNode: focusNode,
       style: Theme.of(context)
           .textTheme

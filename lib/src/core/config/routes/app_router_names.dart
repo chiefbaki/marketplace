@@ -4,7 +4,10 @@ enum RouterNames {
   homeSearch,
   homeNotification,
   search,
+  productInfo,
+  orderPage,
   categoryResult,
+  user,
   userProfile,
   basket,
 }

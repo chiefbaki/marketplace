@@ -589,6 +589,136 @@ class S {
       args: [],
     );
   }
+
+  /// `My profile`
+  String get myProfile {
+    return Intl.message(
+      'My profile',
+      name: 'myProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Цена`
+  String get price {
+    return Intl.message(
+      'Цена',
+      name: 'price',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add to basket`
+  String get addToBasket {
+    return Intl.message(
+      'Add to basket',
+      name: 'addToBasket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Property`
+  String get property {
+    return Intl.message(
+      'Property',
+      name: 'property',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Characteristics`
+  String get characteristics {
+    return Intl.message(
+      'Characteristics',
+      name: 'characteristics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order product`
+  String get orderProduct {
+    return Intl.message(
+      'Order product',
+      name: 'orderProduct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Заказ`
+  String get theOrder {
+    return Intl.message(
+      'Заказ',
+      name: 'theOrder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Methods`
+  String get paymentMethods {
+    return Intl.message(
+      'Payment Methods',
+      name: 'paymentMethods',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Link a card`
+  String get linkACard {
+    return Intl.message(
+      'Link a card',
+      name: 'linkACard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Color`
+  String get color {
+    return Intl.message(
+      'Color',
+      name: 'color',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total`
+  String get total {
+    return Intl.message(
+      'Total',
+      name: 'total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Доставка`
+  String get deliveryPrice {
+    return Intl.message(
+      'Доставка',
+      name: 'deliveryPrice',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

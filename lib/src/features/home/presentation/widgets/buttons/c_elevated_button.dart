@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/src/core/utils/extensions/extensions.dart';
+import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 
 class CElevatedButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -25,6 +26,8 @@ class CElevatedButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             backgroundColor: color,
             elevation: 0,
+            shadowColor: AppColors.lightGrey.withOpacity(0.4),
+            overlayColor: AppColors.hotPink.withOpacity(0.5),
             padding: REdgeInsets.symmetric(horizontal: hor, vertical: ver),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12).r)),

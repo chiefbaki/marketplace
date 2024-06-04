@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/buttons/k_elevated_btn.dart';
 import 'package:marketplace/src/features/widgets/background/colored_container.dart';
 
 const double _paddingUnit = 5;
@@ -137,15 +136,15 @@ class _UserProfileInfoWidgetState extends State<UserProfileInfoWidget> {
                           ],
                         ),
                         const Spacer(),
-                        SizedBox(
-                          width: double.infinity,
-                          child: KElevatedBtn(
-                              widget: Text(
-                                "Понятно",
-                                style: Theme.of(context).textTheme.bodyMedium,
-                              ),
-                              onPressed: () {}),
-                        )
+                        // SizedBox(
+                        //   width: double.infinity,
+                        //   child: KElevatedBtn(
+                        //       widget: Text(
+                        //         "Понятно",
+                        //         style: Theme.of(context).textTheme.bodyMedium,
+                        //       ),
+                        //       onPressed: () {}),
+                        // )
                       ],
                     ),
                   ));

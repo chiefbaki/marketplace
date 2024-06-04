@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "activeSessions":
             MessageLookupByLibrary.simpleMessage("Активные сеансы"),
         "addAddress": MessageLookupByLibrary.simpleMessage("Добавить адрес"),
+        "addToBasket": MessageLookupByLibrary.simpleMessage("Add to basket"),
         "askQuestion": MessageLookupByLibrary.simpleMessage("Задать вопрос"),
         "balance": MessageLookupByLibrary.simpleMessage("Мой баланс"),
         "basket": MessageLookupByLibrary.simpleMessage("Basket"),
@@ -35,14 +36,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "byQr": MessageLookupByLibrary.simpleMessage("QR-коду"),
         "cancel": MessageLookupByLibrary.simpleMessage("Отменить"),
         "category": MessageLookupByLibrary.simpleMessage("Category"),
+        "characteristics":
+            MessageLookupByLibrary.simpleMessage("Characteristics"),
         "chooseOptions":
             MessageLookupByLibrary.simpleMessage("Выбор способа доставки"),
+        "color": MessageLookupByLibrary.simpleMessage("Color"),
         "contactUsIfYouNeedAdvice": MessageLookupByLibrary.simpleMessage(
             "Обратитесь к нам, если нужна консультация"),
         "delayed": MessageLookupByLibrary.simpleMessage("Отложенные"),
         "delete": MessageLookupByLibrary.simpleMessage("Удалить"),
         "deliver": MessageLookupByLibrary.simpleMessage("Курьер"),
         "delivery": MessageLookupByLibrary.simpleMessage("Доставки"),
+        "deliveryPrice": MessageLookupByLibrary.simpleMessage("Доставка"),
+        "description": MessageLookupByLibrary.simpleMessage("Description"),
         "discount": MessageLookupByLibrary.simpleMessage("Скидка"),
         "displayPrices":
             MessageLookupByLibrary.simpleMessage("Отображение цен"),
@@ -60,23 +66,30 @@ class MessageLookup extends MessageLookupByLibrary {
         "kyrgyzSom": MessageLookupByLibrary.simpleMessage("Киргизский сом"),
         "leaveReviewsForProducts":
             MessageLookupByLibrary.simpleMessage("Оставьте отзывы на товары"),
+        "linkACard": MessageLookupByLibrary.simpleMessage("Link a card"),
         "listIsEmpty": MessageLookupByLibrary.simpleMessage("Список пуст"),
         "main": MessageLookupByLibrary.simpleMessage("Main"),
         "marketplace": MessageLookupByLibrary.simpleMessage("Marketplace"),
         "myPaymentMethods":
             MessageLookupByLibrary.simpleMessage("Мои способы оплаты"),
+        "myProfile": MessageLookupByLibrary.simpleMessage("My profile"),
         "myPurchases": MessageLookupByLibrary.simpleMessage("Мои покупки"),
         "notificationIsRemoved":
             MessageLookupByLibrary.simpleMessage("Уведомление удалено"),
         "notifications": MessageLookupByLibrary.simpleMessage("Уведомления"),
         "openWallet": MessageLookupByLibrary.simpleMessage("Открыть кошелек"),
         "order": MessageLookupByLibrary.simpleMessage("Заказать"),
+        "orderProduct": MessageLookupByLibrary.simpleMessage("Order product"),
+        "paymentMethods":
+            MessageLookupByLibrary.simpleMessage("Payment Methods"),
         "paymentUponReceipt":
             MessageLookupByLibrary.simpleMessage("Оплата при получении"),
         "pickUpPoint": MessageLookupByLibrary.simpleMessage("Пункт выдачи"),
+        "price": MessageLookupByLibrary.simpleMessage("Цена"),
         "privacyPolicy":
             MessageLookupByLibrary.simpleMessage("Политика конфиденциальности"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "property": MessageLookupByLibrary.simpleMessage("Property"),
         "ransomAmount": MessageLookupByLibrary.simpleMessage("Сумма выкупа"),
         "redemptionPercentage":
             MessageLookupByLibrary.simpleMessage("Процент выкупа"),
@@ -86,6 +99,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "share": MessageLookupByLibrary.simpleMessage("Поделиться"),
         "specialForYou":
             MessageLookupByLibrary.simpleMessage("Подобрали для вас"),
+        "theOrder": MessageLookupByLibrary.simpleMessage("Заказ"),
+        "total": MessageLookupByLibrary.simpleMessage("Total"),
         "trash": MessageLookupByLibrary.simpleMessage("В корзину"),
         "up": MessageLookupByLibrary.simpleMessage("до 30%"),
         "upComing": MessageLookupByLibrary.simpleMessage("Ближайщие: Сегодня"),

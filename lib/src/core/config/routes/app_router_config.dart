@@ -3,14 +3,15 @@ import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:marketplace/src/core/config/routes/app_router_names.dart';
 import 'package:marketplace/src/features/basket/presentation/pages/basket_page.dart';
-import 'package:marketplace/src/features/home/presentation/pages/notification_page.dart';
+import 'package:marketplace/src/features/basket/presentation/pages/order_page.dart';
 import 'package:marketplace/src/features/search/presentation/pages/category_result_page.dart';
+import 'package:marketplace/src/features/search/presentation/pages/product_info_page.dart';
+import 'package:marketplace/src/features/user_profile/presentation/pages/user_profile_page.dart';
 import 'package:marketplace/src/features/widgets/bottom_navbar.dart';
-import 'package:marketplace/src/features/home/presentation/pages/delivery_method_page.dart';
 import 'package:marketplace/src/features/home/presentation/pages/home_page.dart';
 import 'package:marketplace/src/features/home/presentation/pages/search_page.dart';
 import 'package:marketplace/src/features/search/presentation/pages/search_page.dart';
-import 'package:marketplace/src/features/user_profile/presentation/pages/user_info_page.dart';
+import 'package:marketplace/src/features/user_profile/presentation/pages/user_page.dart';
 
 class AppRouterConfig {
   static final _rootKey = GlobalKey<NavigatorState>();
@@ -22,9 +23,9 @@ class AppRouterConfig {
   static final _shellUserProfile =
       GlobalKey<NavigatorState>(debugLabel: "UserProfileKey");
   static GoRouter routes = GoRouter(
-      initialLocation: "/search/categoryResult",
+      initialLocation: "/basket/order",
       navigatorKey: _rootKey,
-      observers: [],
+      observers: [GoRouterObServer()],
       debugLogDiagnostics: true,
       routes: [
         StatefulShellRoute.indexedStack(
@@ -41,14 +42,14 @@ class AppRouterConfig {
                           child: const HomePage(),
                         ),
                     routes: [
-                      GoRoute(
-                        name: RouterNames.homeDelivery.name,
-                        path: "delivery",
-                        pageBuilder: (context, state) => NoTransitionPage(
-                            key: state.pageKey,
-                            restorationId: state.pageKey.value,
-                            child: const DeliveryMethodPage()),
-                      ),
+                      // GoRoute(
+                      //   name: RouterNames.homeDelivery.name,
+                      //   path: "delivery",
+                      //   pageBuilder: (context, state) => NoTransitionPage(
+                      //       key: state.pageKey,
+                      //       restorationId: state.pageKey.value,
+                      //       child: const DeliveryMethodPage()),
+                      // ),
                       GoRoute(
                         path: "search",
                         name: RouterNames.homeSearch.name,
@@ -57,14 +58,14 @@ class AppRouterConfig {
                             restorationId: state.pageKey.value,
                             child: const HomeSearchPage()),
                       ),
-                      GoRoute(
-                        path: "notification",
-                        name: RouterNames.homeNotification.name,
-                        pageBuilder: (context, state) => NoTransitionPage(
-                            key: state.pageKey,
-                            restorationId: state.pageKey.value,
-                            child: const NotificationPage()),
-                      ),
+                      // GoRoute(
+                      //   path: "notification",
+                      //   name: RouterNames.homeNotification.name,
+                      //   pageBuilder: (context, state) => NoTransitionPage(
+                      //       key: state.pageKey,
+                      //       restorationId: state.pageKey.value,
+                      //       child: const NotificationPage()),
+                      // ),
                     ]),
               ]),
               StatefulShellBranch(navigatorKey: _shellSearch, routes: [
@@ -83,28 +84,54 @@ class AppRouterConfig {
                             key: state.pageKey,
                             restorationId: state.pageKey.value,
                             child: const CategoryResultPage()),
-                      )
+                      ),
+                      GoRoute(
+                        path: "productInfo",
+                        name: RouterNames.productInfo.name,
+                        pageBuilder: (context, state) => NoTransitionPage(
+                            key: state.pageKey,
+                            restorationId: state.pageKey.value,
+                            child: const ProductInfoPage()),
+                      ),
                     ]),
               ]),
               StatefulShellBranch(navigatorKey: _shellBasket, routes: [
                 GoRoute(
-                  path: "/basket",
-                  name: RouterNames.basket.name,
-                  pageBuilder: (context, state) => NoTransitionPage(
-                      key: state.pageKey,
-                      restorationId: state.pageKey.value,
-                      child: const BasketPage()),
-                ),
+                    path: "/basket",
+                    name: RouterNames.basket.name,
+                    pageBuilder: (context, state) => NoTransitionPage(
+                        key: state.pageKey,
+                        restorationId: state.pageKey.value,
+                        child: const BasketPage()),
+                    routes: [
+                      GoRoute(
+                        path: "order",
+                        name: RouterNames.orderPage.name,
+                        pageBuilder: (context, state) => NoTransitionPage(
+                            key: state.pageKey,
+                            restorationId: state.pageKey.value,
+                            child: const OrderPage()),
+                      )
+                    ]),
               ]),
               StatefulShellBranch(navigatorKey: _shellUserProfile, routes: [
                 GoRoute(
-                  path: "/user-profile",
-                  name: RouterNames.userProfile.name,
-                  pageBuilder: (context, state) => NoTransitionPage(
-                      key: state.pageKey,
-                      restorationId: state.pageKey.value,
-                      child: const UserInfoPage()),
-                ),
+                    path: "/user",
+                    name: RouterNames.user.name,
+                    pageBuilder: (context, state) => NoTransitionPage(
+                        key: state.pageKey,
+                        restorationId: state.pageKey.value,
+                        child: const UserPage()),
+                    routes: [
+                      GoRoute(
+                        path: "profile",
+                        name: RouterNames.userProfile.name,
+                        pageBuilder: (context, state) => NoTransitionPage(
+                            key: state.pageKey,
+                            restorationId: state.pageKey.value,
+                            child: const UserProfilePage()),
+                      )
+                    ]),
               ])
             ]),
       ]);
@@ -128,20 +155,6 @@ class GoRouterObServer extends NavigatorObserver {
 
   @override
   void didReplace({Route? newRoute, Route? oldRoute}) {
-    // TODO: implement didReplace
+    debugPrint("replace --> $newRoute");
   }
-
-  @override
-  void didStartUserGesture(Route route, Route? previousRoute) {
-    // TODO: implement didStartUserGesture
-  }
-
-  @override
-  void didStopUserGesture() {
-    // TODO: implement didStopUserGesture
-  }
-
-  @override
-  // TODO: implement navigator
-  NavigatorState? get navigator => throw UnimplementedError();
 }

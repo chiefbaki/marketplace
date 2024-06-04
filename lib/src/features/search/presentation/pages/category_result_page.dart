@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/buttons/k_button.dart';
+import 'package:marketplace/src/features/widgets/buttons/c_icon_button.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/fields/search_form_field.dart';
 import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
 import 'package:marketplace/src/features/widgets/product_card.dart';
@@ -35,8 +36,8 @@ class _CategoryResultPageState extends State<CategoryResultPage> {
                 automaticallyImplyLeading: false,
                 flexibleSpace: Row(
                   children: [
-                    KButton(
-                        onPressed: () {},
+                    CButton(
+                        onPressed: () => _pop(),
                         icon: SvgPicture.asset(
                           Images.arrowLeft,
                           color: AppColors.grey,
@@ -78,7 +79,7 @@ class _CategoryResultPageState extends State<CategoryResultPage> {
                       children: [
                         Row(
                           children: [
-                            KButton(
+                            CButton(
                                 onPressed: () {},
                                 icon: Row(
                                   children: [SvgPicture.asset(Images.arrow3)],
@@ -94,7 +95,7 @@ class _CategoryResultPageState extends State<CategoryResultPage> {
                         ),
                         Row(
                           children: [
-                            KButton(
+                            CButton(
                                 onPressed: () {},
                                 icon: Row(
                                   children: [
@@ -130,5 +131,9 @@ class _CategoryResultPageState extends State<CategoryResultPage> {
         ),
       ),
     );
+  }
+
+  void _pop() {
+    context.pop();
   }
 }
