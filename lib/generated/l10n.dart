@@ -719,6 +719,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Reset`
+  String get reset {
+    return Intl.message(
+      'Reset',
+      name: 'reset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `With discount`
+  String get withDiscount {
+    return Intl.message(
+      'With discount',
+      name: 'withDiscount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Brand`
+  String get brand {
+    return Intl.message(
+      'Brand',
+      name: 'brand',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Manufacture`
+  String get manufacture {
+    return Intl.message(
+      'Manufacture',
+      name: 'manufacture',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your phone number to receive SMS code`
+  String get pleaseEnterYourPhoneNumberToReceiveSmsCode {
+    return Intl.message(
+      'Please enter your phone number to receive SMS code',
+      name: 'pleaseEnterYourPhoneNumberToReceiveSmsCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in`
+  String get signIn {
+    return Intl.message(
+      'Sign in',
+      name: 'signIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Further`
+  String get further {
+    return Intl.message(
+      'Further',
+      name: 'further',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Correct the number`
+  String get correctTheNumber {
+    return Intl.message(
+      'Correct the number',
+      name: 'correctTheNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send again`
+  String get sendAgain {
+    return Intl.message(
+      'Send again',
+      name: 'sendAgain',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

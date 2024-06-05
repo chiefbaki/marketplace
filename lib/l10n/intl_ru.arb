@@ -65,5 +65,15 @@
   "linkACard": "Link a card",
   "color": "Color",
   "total": "Total",
-  "deliveryPrice": "Доставка"
+  "deliveryPrice": "Доставка",
+  "reset": "Reset",
+  "withDiscount": "With discount",
+  "brand": "Brand",
+  "manufacture": "Manufacture",
+  "pleaseEnterYourPhoneNumberToReceiveSmsCode": "Please enter your phone number to receive SMS code",
+  "signIn": "Sign in",
+  "phoneNumber": "Phone number",
+  "further": "Further",
+  "correctTheNumber": "Correct the number",
+  "sendAgain": "Send again"
 }

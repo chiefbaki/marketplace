@@ -22,9 +22,13 @@ abstract class AppColors {
   static Color primaryColor = ColorExt.fromHex("#FFECEF");
   static Color lightGrey = ColorExt.fromHex("#EBEBEB");
   static Color navyBlue = ColorExt.fromHex("#585DE4");
+  static Color charcoal = ColorExt.fromHex("#52585B");
+  static Color ashyGray = ColorExt.fromHex("#626576");
   static Color pinkSalt = ColorExt.fromHex("#FFCDD6");
+  static Color whisper = ColorExt.fromHex("#F5F5F5");
   static Color hotPink = ColorExt.fromHex("#FF2D55");
-
+  static Color lighterPink = ColorExt.fromHex("#FFB6C3");
+  static Color slategray = ColorExt.fromHex("#A3A5AE");
   static const Color pink = Color(0xFFF2E6FE);
   static const Color searchFieldColor = Color.fromARGB(255, 242, 242, 242);
 }

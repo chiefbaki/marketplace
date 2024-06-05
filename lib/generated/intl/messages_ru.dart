@@ -32,6 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "askQuestion": MessageLookupByLibrary.simpleMessage("Задать вопрос"),
         "balance": MessageLookupByLibrary.simpleMessage("Мой баланс"),
         "basket": MessageLookupByLibrary.simpleMessage("Basket"),
+        "brand": MessageLookupByLibrary.simpleMessage("Brand"),
         "byPopularity": MessageLookupByLibrary.simpleMessage("By popularity"),
         "byQr": MessageLookupByLibrary.simpleMessage("QR-коду"),
         "cancel": MessageLookupByLibrary.simpleMessage("Отменить"),
@@ -43,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "color": MessageLookupByLibrary.simpleMessage("Color"),
         "contactUsIfYouNeedAdvice": MessageLookupByLibrary.simpleMessage(
             "Обратитесь к нам, если нужна консультация"),
+        "correctTheNumber":
+            MessageLookupByLibrary.simpleMessage("Correct the number"),
         "delayed": MessageLookupByLibrary.simpleMessage("Отложенные"),
         "delete": MessageLookupByLibrary.simpleMessage("Удалить"),
         "deliver": MessageLookupByLibrary.simpleMessage("Курьер"),
@@ -60,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "filters": MessageLookupByLibrary.simpleMessage("Filters"),
         "findTheBestPlaceForYourTrip": MessageLookupByLibrary.simpleMessage(
             "Find the best place for your trip"),
+        "further": MessageLookupByLibrary.simpleMessage("Further"),
         "getProductsBy":
             MessageLookupByLibrary.simpleMessage("Получите товары по "),
         "goodsOfWeek": MessageLookupByLibrary.simpleMessage("Goods of week"),
@@ -69,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "linkACard": MessageLookupByLibrary.simpleMessage("Link a card"),
         "listIsEmpty": MessageLookupByLibrary.simpleMessage("Список пуст"),
         "main": MessageLookupByLibrary.simpleMessage("Main"),
+        "manufacture": MessageLookupByLibrary.simpleMessage("Manufacture"),
         "marketplace": MessageLookupByLibrary.simpleMessage("Marketplace"),
         "myPaymentMethods":
             MessageLookupByLibrary.simpleMessage("Мои способы оплаты"),
@@ -84,7 +89,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Payment Methods"),
         "paymentUponReceipt":
             MessageLookupByLibrary.simpleMessage("Оплата при получении"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number"),
         "pickUpPoint": MessageLookupByLibrary.simpleMessage("Пункт выдачи"),
+        "pleaseEnterYourPhoneNumberToReceiveSmsCode":
+            MessageLookupByLibrary.simpleMessage(
+                "Please enter your phone number to receive SMS code"),
         "price": MessageLookupByLibrary.simpleMessage("Цена"),
         "privacyPolicy":
             MessageLookupByLibrary.simpleMessage("Политика конфиденциальности"),
@@ -93,10 +102,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "ransomAmount": MessageLookupByLibrary.simpleMessage("Сумма выкупа"),
         "redemptionPercentage":
             MessageLookupByLibrary.simpleMessage("Процент выкупа"),
+        "reset": MessageLookupByLibrary.simpleMessage("Reset"),
         "returnOfDefectiveGoods":
             MessageLookupByLibrary.simpleMessage("Возврат товара по браку"),
         "search": MessageLookupByLibrary.simpleMessage("Поиск"),
+        "sendAgain": MessageLookupByLibrary.simpleMessage("Send again"),
         "share": MessageLookupByLibrary.simpleMessage("Поделиться"),
+        "signIn": MessageLookupByLibrary.simpleMessage("Sign in"),
         "specialForYou":
             MessageLookupByLibrary.simpleMessage("Подобрали для вас"),
         "theOrder": MessageLookupByLibrary.simpleMessage("Заказ"),
@@ -106,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "upComing": MessageLookupByLibrary.simpleMessage("Ближайщие: Сегодня"),
         "waitingList": MessageLookupByLibrary.simpleMessage("Лист ожидания"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
+        "withDiscount": MessageLookupByLibrary.simpleMessage("With discount"),
         "youPersonalDiscountonWB": MessageLookupByLibrary.simpleMessage(
             "Ваша персональная скидка на Wildberries"),
         "youWatched": MessageLookupByLibrary.simpleMessage("Вы смотрели")

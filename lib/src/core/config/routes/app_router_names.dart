@@ -6,8 +6,11 @@ enum RouterNames {
   search,
   productInfo,
   orderPage,
+  filterPage,
   categoryResult,
   user,
   userProfile,
   basket,
+  phoneInputPage,
+  verifyNumberPage
 }

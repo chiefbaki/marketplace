@@ -4,7 +4,10 @@ import 'package:go_router/go_router.dart';
 import 'package:marketplace/src/core/config/routes/app_router_names.dart';
 import 'package:marketplace/src/features/basket/presentation/pages/basket_page.dart';
 import 'package:marketplace/src/features/basket/presentation/pages/order_page.dart';
+import 'package:marketplace/src/features/login/presentation/pages/verify_number_page.dart';
+import 'package:marketplace/src/features/login/presentation/pages/phone_input_page.dart';
 import 'package:marketplace/src/features/search/presentation/pages/category_result_page.dart';
+import 'package:marketplace/src/features/search/presentation/pages/filter_page.dart';
 import 'package:marketplace/src/features/search/presentation/pages/product_info_page.dart';
 import 'package:marketplace/src/features/user_profile/presentation/pages/user_profile_page.dart';
 import 'package:marketplace/src/features/widgets/bottom_navbar.dart';
@@ -23,11 +26,30 @@ class AppRouterConfig {
   static final _shellUserProfile =
       GlobalKey<NavigatorState>(debugLabel: "UserProfileKey");
   static GoRouter routes = GoRouter(
-      initialLocation: "/basket/order",
+      initialLocation: "/login/verify-number",
       navigatorKey: _rootKey,
       observers: [GoRouterObServer()],
       debugLogDiagnostics: true,
       routes: [
+        GoRoute(
+            path: "/login",
+            name: RouterNames.phoneInputPage.name,
+            pageBuilder: (context, state) => NoTransitionPage(
+                  key: state.pageKey,
+                  restorationId: state.pageKey.value,
+                  child: const PhoneInputPage(),
+                ),
+            routes: [
+              GoRoute(
+                  path: "verify-number",
+                  name: RouterNames.verifyNumberPage.name,
+                  pageBuilder: (context, state) => NoTransitionPage(
+                        key: state.pageKey,
+                        restorationId: state.pageKey.value,
+                        child: const VerifyNumberPage(),
+                      ),
+                  routes: []),
+            ]),
         StatefulShellRoute.indexedStack(
             builder: (context, state, navigationShell) =>
                 KBottomNavBar(child: navigationShell),
@@ -92,6 +114,14 @@ class AppRouterConfig {
                             key: state.pageKey,
                             restorationId: state.pageKey.value,
                             child: const ProductInfoPage()),
+                      ),
+                      GoRoute(
+                        path: "filter",
+                        name: RouterNames.filterPage.name,
+                        pageBuilder: (context, state) => NoTransitionPage(
+                            key: state.pageKey,
+                            restorationId: state.pageKey.value,
+                            child: const FilterPage()),
                       ),
                     ]),
               ]),
