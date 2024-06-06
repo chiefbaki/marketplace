@@ -6,11 +6,11 @@ import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/banner.dart';
-import 'package:marketplace/src/features/home/presentation/widgets/c_carousel.dart';
+import 'package:marketplace/src/features/home/presentation/widgets/custom_carousel.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/fields/c_static_search_bar.dart';
 import 'package:marketplace/src/features/widgets/product_card.dart';
 import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 
 const double _unit = 16;
 const double _horizontalUnit = 24;

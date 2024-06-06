@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 
 class SearchFormField extends StatelessWidget {
   final TextEditingController controller;

@@ -75,5 +75,8 @@
   "phoneNumber": "Phone number",
   "further": "Further",
   "correctTheNumber": "Correct the number",
-  "sendAgain": "Send again"
+  "sendAgain": "Send again",
+  "createAnAccount": "Create an account",
+  "inputYourFullname": "Input your fullname",
+  "inputName": "Input name"
 }

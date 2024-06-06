@@ -10,6 +10,7 @@ enum RouterNames {
   categoryResult,
   user,
   userProfile,
+  createAnAccount,
   basket,
   phoneInputPage,
   verifyNumberPage

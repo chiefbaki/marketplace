@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/fields/c_static_search_bar.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/search_category_widget.dart';
 import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
-import 'package:marketplace/src/features/widgets/buttons/c_text_button.dart';
+import 'package:marketplace/src/features/widgets/buttons/custom_text_button.dart';
 
 const double _horUnit = 16;
 const double _verUnit = 24;

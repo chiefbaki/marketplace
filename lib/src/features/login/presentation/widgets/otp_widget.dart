@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 
+typedef OnSaved = void Function(String);
+
 class OTP extends StatelessWidget {
   final TextEditingController controller;
   const OTP({super.key, required this.controller});
@@ -16,7 +18,7 @@ class OTP extends StatelessWidget {
         key: key,
         child: TextFormField(
           controller: controller,
-          textInputAction: TextInputAction.continueAction,
+          textInputAction: TextInputAction.done,
           keyboardType: TextInputType.number,
           keyboardAppearance: Brightness.light,
           maxLength: 1,

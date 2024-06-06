@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 
 class SearchCategoryWidget extends StatelessWidget {
   const SearchCategoryWidget({

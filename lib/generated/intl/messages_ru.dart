@@ -46,6 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Обратитесь к нам, если нужна консультация"),
         "correctTheNumber":
             MessageLookupByLibrary.simpleMessage("Correct the number"),
+        "createAnAccount":
+            MessageLookupByLibrary.simpleMessage("Create an account"),
         "delayed": MessageLookupByLibrary.simpleMessage("Отложенные"),
         "delete": MessageLookupByLibrary.simpleMessage("Удалить"),
         "deliver": MessageLookupByLibrary.simpleMessage("Курьер"),
@@ -67,6 +69,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "getProductsBy":
             MessageLookupByLibrary.simpleMessage("Получите товары по "),
         "goodsOfWeek": MessageLookupByLibrary.simpleMessage("Goods of week"),
+        "inputName": MessageLookupByLibrary.simpleMessage("Input name"),
+        "inputYourFullname":
+            MessageLookupByLibrary.simpleMessage("Input your fullname"),
         "kyrgyzSom": MessageLookupByLibrary.simpleMessage("Киргизский сом"),
         "leaveReviewsForProducts":
             MessageLookupByLibrary.simpleMessage("Оставьте отзывы на товары"),

@@ -169,14 +169,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
-  circular_countdown_timer:
-    dependency: "direct main"
-    description:
-      name: circular_countdown_timer
-      sha256: "9ba5fbc076cedbcbf6190ed86762e679f43d7c67cdd903ea34df059dabdc08d4"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.2.3"
   clock:
     dependency: transitive
     description:
@@ -453,6 +445,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "14.1.2"
+  go_router_paths:
+    dependency: "direct main"
+    description:
+      name: go_router_paths
+      sha256: ef471b7936d0a61d7c60f39deb340dbe6451c9ced418f1b4a62fb68469d63cc3
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.2"
   graphs:
     dependency: transitive
     description:
@@ -701,6 +701,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
+  pedantic:
+    dependency: transitive
+    description:
+      name: pedantic
+      sha256: "67fc27ed9639506c856c840ccce7594d0bdcd91bc8d53d6e52359449a1d50602"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.11.1"
   petitparser:
     dependency: transitive
     description:
@@ -962,6 +970,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  surf_lint_rules:
+    dependency: "direct main"
+    description:
+      name: surf_lint_rules
+      sha256: da9a47fa52e257499f07ca37900f06a5a157f895d28d157268f82635efa0bed9
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   synchronized:
     dependency: transitive
     description:

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 
 class CListTile extends StatelessWidget {
   const CListTile({
@@ -24,7 +25,7 @@ class CListTile extends StatelessWidget {
         decoration: const BoxDecoration(color: AppColors.white),
       ),
       title: Text(
-        "Мои способы оплаты",
+        S.of(context).myPaymentMethods,
         style: context.textTheme.bodyLarge!.copyWith(color: AppColors.black),
       ),
       subtitle: Text(

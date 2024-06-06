@@ -5,11 +5,11 @@ import 'package:go_router/go_router.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/widgets/buttons/c_icon_button.dart';
+import 'package:marketplace/src/features/widgets/buttons/custom_icon_button.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/fields/search_form_field.dart';
 import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
 import 'package:marketplace/src/features/widgets/product_card.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 
 const double _unit = 16;
 final REdgeInsets _padding = REdgeInsets.fromLTRB(_unit, 24, _unit, 24);

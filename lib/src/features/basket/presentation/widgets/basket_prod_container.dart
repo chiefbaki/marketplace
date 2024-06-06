@@ -4,7 +4,7 @@ import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/basket/presentation/widgets/basket_btn.dart';
 import 'package:marketplace/src/features/home/presentation/widgets/buttons/c_elevated_button.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 
 class BasketProdContainer extends StatelessWidget {
   const BasketProdContainer({

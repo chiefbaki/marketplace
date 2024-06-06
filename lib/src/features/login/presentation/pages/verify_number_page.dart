@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:marketplace/generated/l10n.dart';
+import 'package:marketplace/src/core/config/routes/router_names.dart';
 import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/login/presentation/widgets/otp_widget.dart';
-import 'package:marketplace/src/features/widgets/buttons/c_elevated_button.dart';
-import 'package:marketplace/src/features/widgets/buttons/c_text_button.dart';
+import 'package:marketplace/src/features/widgets/buttons/custom_elevated_button.dart';
+import 'package:marketplace/src/features/widgets/buttons/custom_text_button.dart';
 
 class VerifyNumberPage extends StatefulWidget {
   const VerifyNumberPage({super.key});
@@ -75,7 +77,7 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
                             begin: const Duration(seconds: 10),
                             end: Duration.zero),
                         onEnd: () {
-                          print('Timer ended');
+                          debugPrint('Timer ended');
                           setState(() {
                             _isEnd = !_isEnd;
                           });
@@ -95,10 +97,17 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
               ],
             ),
             const Spacer(),
-            CElevatedBtn(text: S.of(context).further, onPressed: () {})
+            CElevatedBtn(
+                text: S.of(context).further,
+                onPressed: () async {
+                  await Future.delayed(const Duration(seconds: 1));
+                  _goToVerify();
+                })
           ],
         ),
       )),
     );
   }
+
+  void _goToVerify() => context.goNamed(RouterNames.createAnAccount.name);
 }

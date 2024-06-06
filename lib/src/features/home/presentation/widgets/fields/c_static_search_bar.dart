@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 
 class CStaticSearchBar extends StatelessWidget {
   const CStaticSearchBar({

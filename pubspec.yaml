@@ -72,6 +72,9 @@ dependencies:
   freezed_annotation: ^2.4.1
   logging: ^1.2.0
   build_runner: ^2.4.10
+  go_router_paths: ^0.2.2
+  
+  surf_lint_rules: ^1.0.0
   
 
 dev_dependencies:
@@ -84,6 +87,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
-import 'package:marketplace/src/core/config/routes/app_router_names.dart';
+import 'package:marketplace/src/core/config/routes/router_names.dart';
 import 'package:marketplace/src/features/basket/presentation/pages/basket_page.dart';
 import 'package:marketplace/src/features/basket/presentation/pages/order_page.dart';
+import 'package:marketplace/src/features/login/presentation/pages/create_account_page.dart';
 import 'package:marketplace/src/features/login/presentation/pages/verify_number_page.dart';
 import 'package:marketplace/src/features/login/presentation/pages/phone_input_page.dart';
 import 'package:marketplace/src/features/search/presentation/pages/category_result_page.dart';
@@ -26,30 +27,37 @@ class AppRouterConfig {
   static final _shellUserProfile =
       GlobalKey<NavigatorState>(debugLabel: "UserProfileKey");
   static GoRouter routes = GoRouter(
-      initialLocation: "/login/verify-number",
+      initialLocation: "/phone-input",
       navigatorKey: _rootKey,
       observers: [GoRouterObServer()],
       debugLogDiagnostics: true,
       routes: [
         GoRoute(
-            path: "/login",
-            name: RouterNames.phoneInputPage.name,
-            pageBuilder: (context, state) => NoTransitionPage(
-                  key: state.pageKey,
-                  restorationId: state.pageKey.value,
-                  child: const PhoneInputPage(),
-                ),
-            routes: [
-              GoRoute(
-                  path: "verify-number",
-                  name: RouterNames.verifyNumberPage.name,
-                  pageBuilder: (context, state) => NoTransitionPage(
-                        key: state.pageKey,
-                        restorationId: state.pageKey.value,
-                        child: const VerifyNumberPage(),
-                      ),
-                  routes: []),
-            ]),
+          path: "/phone-input",
+          name: RouterNames.phoneInputPage.name,
+          pageBuilder: (context, state) => NoTransitionPage(
+            key: state.pageKey,
+            restorationId: state.pageKey.value,
+            child: const PhoneInputPage(),
+          ),
+        ),
+        GoRoute(
+          path: "/verify-number",
+          name: RouterNames.verifyNumberPage.name,
+          pageBuilder: (context, state) => NoTransitionPage(
+            key: state.pageKey,
+            restorationId: state.pageKey.value,
+            child: const VerifyNumberPage(),
+          ),
+        ),
+        GoRoute(
+          path: "/create-account",
+          name: RouterNames.createAnAccount.name,
+          pageBuilder: (context, state) => NoTransitionPage(
+              key: state.pageKey,
+              restorationId: state.pageKey.value,
+              child: const CreateAccountPage()),
+        ),
         StatefulShellRoute.indexedStack(
             builder: (context, state, navigationShell) =>
                 KBottomNavBar(child: navigationShell),

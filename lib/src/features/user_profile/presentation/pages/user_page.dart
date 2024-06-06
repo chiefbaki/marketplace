@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
-import 'package:marketplace/src/features/user_profile/presentation/widgets/c_ist_tile.dart';
+import 'package:marketplace/src/features/user_profile/presentation/widgets/custom_list_tile.dart';
 import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 
 const double _paddingUnit = 16;
 

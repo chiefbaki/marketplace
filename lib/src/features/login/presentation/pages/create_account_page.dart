@@ -6,19 +6,17 @@ import 'package:marketplace/src/core/config/routes/router_names.dart';
 import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/login/presentation/widgets/login_form_field.dart';
-
 import 'package:marketplace/src/features/widgets/buttons/custom_elevated_button.dart';
 
-class PhoneInputPage extends StatefulWidget {
-  const PhoneInputPage({super.key});
+class CreateAccountPage extends StatefulWidget {
+  const CreateAccountPage({super.key});
 
   @override
-  State<PhoneInputPage> createState() => _PhoneInputPageState();
+  State<CreateAccountPage> createState() => _CreateAccountPageState();
 }
 
-class _PhoneInputPageState extends State<PhoneInputPage> {
-  final _controller = TextEditingController(text: "+996  ");
-
+class _CreateAccountPageState extends State<CreateAccountPage> {
+  final _controller = TextEditingController();
   final _focusNode = FocusNode();
   final _formKey = GlobalKey<FormState>();
 
@@ -31,11 +29,8 @@ class _PhoneInputPageState extends State<PhoneInputPage> {
 
   @override
   Widget build(BuildContext context) {
-    _controller.selection = TextSelection.fromPosition(
-        TextPosition(offset: _controller.text.length));
     return Scaffold(
       backgroundColor: AppColors.white,
-      resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: Padding(
           padding: REdgeInsets.symmetric(horizontal: 16, vertical: 24),
@@ -43,31 +38,27 @@ class _PhoneInputPageState extends State<PhoneInputPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                S.of(context).signIn,
+                S.of(context).createAnAccount,
                 style: context.textTheme.titleLarge!.copyWith(
                     color: AppColors.black,
                     fontSize: 22.sp,
                     fontWeight: FontWeight.w600),
               ),
-              8.verticalSpace,
+              16.verticalSpace,
               Text(
-                S.of(context).pleaseEnterYourPhoneNumberToReceiveSmsCode,
+                S.of(context).inputYourFullname,
                 style: context.textTheme.titleMedium!.copyWith(
                   color: AppColors.ashyGray,
                 ),
               ),
-              32.verticalSpace,
-              Text(
-                S.of(context).phoneNumber,
-                style: context.textTheme.titleMedium!
-                    .copyWith(color: AppColors.black),
-              ),
-              6.verticalSpace,
+              8.verticalSpace,
               LoginTextField(
                 focusNode: _focusNode,
                 controller: _controller,
                 formKey: _formKey,
-                textInputType: TextInputType.phone,
+                textInputAction: TextInputAction.done,
+                textInputType: TextInputType.text,
+                hintText: S.of(context).inputName,
               ),
               const Spacer(),
               CElevatedBtn(
@@ -81,8 +72,9 @@ class _PhoneInputPageState extends State<PhoneInputPage> {
                       ),
                     );
                   }
-                  await Future.delayed(const Duration(seconds: 2));
-                  _goToVerify();
+                  await Future.delayed(const Duration(seconds: 1));
+                  debugPrint("work");
+                  _goToHome();
                 },
               )
             ],
@@ -92,5 +84,5 @@ class _PhoneInputPageState extends State<PhoneInputPage> {
     );
   }
 
-  void _goToVerify() => context.goNamed(RouterNames.verifyNumberPage.name);
+  void _goToHome() => context.goNamed(RouterNames.home.name);
 }

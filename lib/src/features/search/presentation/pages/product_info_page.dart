@@ -11,10 +11,10 @@ import 'package:marketplace/src/features/search/presentation/widgets/circle_arro
 import 'package:marketplace/src/features/search/presentation/widgets/filter_container.dart';
 import 'package:marketplace/src/features/search/presentation/widgets/prod_list_scroll.dart';
 import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
-import 'package:marketplace/src/features/widgets/buttons/c_elevated_button.dart';
-import 'package:marketplace/src/features/widgets/buttons/c_icon_button.dart';
+import 'package:marketplace/src/features/widgets/buttons/custom_elevated_button.dart';
+import 'package:marketplace/src/features/widgets/buttons/custom_icon_button.dart';
 import 'package:marketplace/src/features/widgets/dicsount_container.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class ProductInfoPage extends StatefulWidget {

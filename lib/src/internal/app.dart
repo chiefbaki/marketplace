@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace/generated/l10n.dart';
-import 'package:marketplace/src/core/config/routes/app_router_config.dart';
+import 'package:marketplace/src/core/config/routes/router_config.dart';
 import 'package:marketplace/src/core/utils/theme/theme.dart';
 
 class MyApp extends StatelessWidget {

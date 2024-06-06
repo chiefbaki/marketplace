@@ -4,8 +4,8 @@ import 'package:marketplace/generated/l10n.dart';
 import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
-import 'package:marketplace/src/features/widgets/buttons/c_elevated_button.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/features/widgets/buttons/custom_elevated_button.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 
 class OrderPage extends StatelessWidget {
   const OrderPage({super.key});

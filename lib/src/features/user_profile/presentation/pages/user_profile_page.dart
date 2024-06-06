@@ -6,8 +6,8 @@ import 'package:marketplace/src/core/utils/extensions/extensions.dart';
 import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/user_profile/presentation/widgets/profile_list_tile.dart';
 import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
-import 'package:marketplace/src/features/widgets/buttons/c_icon_button.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/features/widgets/buttons/custom_icon_button.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 
 class UserProfilePage extends StatelessWidget {
   const UserProfilePage({super.key});

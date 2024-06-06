@@ -7,10 +7,10 @@ import 'package:marketplace/src/core/utils/theme/app_colors.dart';
 import 'package:marketplace/src/features/search/presentation/widgets/custom_range_slider.dart';
 import 'package:marketplace/src/features/search/presentation/widgets/filter_btn.dart';
 import 'package:marketplace/src/features/widgets/background/colored_safe_area.dart';
-import 'package:marketplace/src/features/widgets/buttons/c_elevated_button.dart';
-import 'package:marketplace/src/features/widgets/buttons/c_icon_button.dart';
-import 'package:marketplace/src/features/widgets/buttons/c_text_button.dart';
-import 'package:marketplace/src/utils/resources/resources.dart';
+import 'package:marketplace/src/features/widgets/buttons/custom_elevated_button.dart';
+import 'package:marketplace/src/features/widgets/buttons/custom_icon_button.dart';
+import 'package:marketplace/src/features/widgets/buttons/custom_text_button.dart';
+import 'package:marketplace/src/core/utils/resources/resources.dart';
 
 class FilterPage extends StatelessWidget {
   const FilterPage({super.key});
